@@ -6,6 +6,7 @@ Library       SeleniumLibrary
 Resource    Settings.resource
 Resource    pages/Home.resource
 Resource    pages/ProductInfo.resource
+Resource    pages/PreShopping.resource
 Resource    variables/Web_variables.robot
 
 *** Keywords ***
@@ -20,3 +21,9 @@ Writing element in input
         Press Keys    xpath=${lOCATOR}    ${ch}
         Sleep    0.08
     END
+
+Scroll to see element
+    [Arguments]    ${COMPONENT}
+    ${ELEMENT}=    Get WebElement    ${COMPONENT}
+    Scroll Element Into View    ${ELEMENT}
+    Sleep    3s
