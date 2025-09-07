@@ -2,7 +2,8 @@
 Documentation    Acoes e elementos da pagina inicial da aplicacao
 
 Library    SeleniumLibrary
-Library    ../libs/Libs.py
+
+Resource    variables/Web_variables.robot
 
 *** Variables ***
 ${SEARCH_INPUT}    //input[@id='inputBusca']
@@ -28,6 +29,8 @@ Writing element in input search
 Click in the first product in list
     Wait Until Element Is Visible    xpath=${PRODUCT_LIST}
     Element Should Be Visible    xpath=${PRODUCT_LIST}
-    Wait Until Element Is Enabled    xpath=${PRODUCT_LIST}//li[1]
+    Wait Until Element Is Visible    xpath=${PRODUCT_LIST}//li[1]
+    ${product_selected}=    Get Text    xpath=${PRODUCT_LIST}//li[1]
+    Set Global Variable    ${PRODUCT_SELECTED}    ${product_selected}
     Click Element    xpath=${PRODUCT_LIST}//li[1]
     Capture Page Screenshot

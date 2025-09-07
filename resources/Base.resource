@@ -5,6 +5,7 @@ Library       SeleniumLibrary
 
 Resource    Settings.resource
 Resource    pages/Home.resource
+Resource    variables/Web_variables.robot
 
 *** Keywords ***
 
