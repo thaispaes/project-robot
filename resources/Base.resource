@@ -13,3 +13,10 @@ Resource    variables/Web_variables.robot
 Access page
     Open Browser    ${URL}    chrome
 
+Writing element in input
+    [Arguments]    ${PRODUCT_NAME}    ${lOCATOR}
+    ${chars}=    Evaluate    [caracter for caracter in "${PRODUCT_NAME}"]
+    FOR    ${ch}    IN    @{chars}
+        Press Keys    xpath=${lOCATOR}    ${ch}
+        Sleep    0.08
+    END

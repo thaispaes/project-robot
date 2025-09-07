@@ -4,6 +4,7 @@ Documentation    Acoes e elementos da pagina inicial da aplicacao
 Library    SeleniumLibrary
 
 Resource    variables/Web_variables.robot
+Resource    ../Base.resource
 
 *** Variables ***
 ${SEARCH_INPUT}    //input[@id='inputBusca']
@@ -15,16 +16,9 @@ Search the product in application
     [Arguments]    ${PRODUCT_NAME}
     Wait Until Element Is Visible    xpath=${SEARCH_INPUT}
     Click Element    xpath=${SEARCH_INPUT}
-    Writing element in input search    ${PRODUCT_NAME}
+    Writing element in input    ${PRODUCT_NAME}    ${SEARCH_INPUT}
     Capture Page Screenshot
 
-Writing element in input search
-    [Arguments]    ${PRODUCT_NAME}
-    ${chars}=    Evaluate    [caracter for caracter in "${PRODUCT_NAME}"]
-    FOR    ${ch}    IN    @{chars}
-        Press Keys    xpath=${SEARCH_INPUT}    ${ch}
-        Sleep    0.08
-    END
     
 Click in the first product in list
     Wait Until Element Is Visible    xpath=${PRODUCT_LIST}

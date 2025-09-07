@@ -12,7 +12,7 @@ Find product with success
     Given Search the product in application    ${PRODUCT}
     Then Click in the first product in list
     And Validate product selected info page
-    And Search for shipping options     #not writing in input
+    And Search for shipping options     
     #And Validate shipping types - Not working
     #And Closing shipping options section
 
