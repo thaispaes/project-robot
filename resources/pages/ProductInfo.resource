@@ -10,7 +10,7 @@ Resource    Base.resource
 ${SHIPPING_INPUT}    //input[@id='inputCalcularFrete']
 ${SHIPPING_SECTION}    //section[@id='blocoCalcularFrete']
 ${SHIPPING_SECTION_CLOSE}    //button[@id='botaoAlterarCEP']
-${TESTE}    //img[@alt='Banner']
+${SCROLL}    //img[@alt='Banner']
 
 
 *** Keywords ***
@@ -18,11 +18,10 @@ Validate product selected info page
     Element Should Be Visible    //h1[text()='${PRODUCT_SELECTED}']
 
 Search for shipping options
-    Scroll to see element    ${TESTE}
+    Scroll to see element    ${SCROLL}
     Element Should Be Visible    ${SHIPPING_INPUT}
     Click Element    ${SHIPPING_INPUT}   
     Input Text    ${SHIPPING_INPUT}    ${CEP}
-    Sleep    3s
     Wait Until Element Is Visible    ${SHIPPING_SECTION}//div//span[contains=(text()='CEP: 52071-321')][2]    timeout=10s
     #Validate shipping types NOT WORKING
     Capture Page Screenshot
