@@ -13,6 +13,7 @@ Resource    variables/Web_variables.robot
 
 Access page
     Open Browser    ${URL}    chrome
+    Maximize Browser Window
 
 Writing element in input
     [Arguments]    ${PRODUCT_NAME}    ${lOCATOR}

@@ -41,15 +41,14 @@ Closing shipping options section
 Select to buy the product
     Scroll to see element    ${SCROLL}
     Click Element    ${BUY_BUTTON}
-    Capture Page Screenshot
     Sleep    5s
-    Validate if the product is add in the cart
     Capture Page Screenshot
     Validate if warranty and insurance is selected
-    Capture Page Screenshot
-    Go to shopping cart
     Sleep    5s
-    Capture Page Screenshot
+    Validate if the product is add in the cart
+    Sleep    3s
+    Go to shopping cart
+    
 
 
 
