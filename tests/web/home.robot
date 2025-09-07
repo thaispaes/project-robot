@@ -9,4 +9,5 @@ Test Teardown    Close Browser
 *** Test Cases ***
 Find product with success
     [Documentation]    Validar a busca de um produto na aplicacao
-    Given Search the product in application    PRODUCT_NAME=notebook
+    Given Search the product in application    notebook
+    Then Click in the first product in list

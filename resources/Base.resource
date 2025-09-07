@@ -10,4 +10,4 @@ Resource    pages/Home.resource
 
 Access page
     Open Browser    ${URL}    chrome
-    Maximize Browser Window
+
