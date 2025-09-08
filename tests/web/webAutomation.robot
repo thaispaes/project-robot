@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Testes relacionados a pagina de HOME da aplicacao
+Documentation    Testes relacionados a selecionar e comprar um produto na aplicacao web
 
 # Libraries e Resources
 Resource    ../../resources/Web.resource

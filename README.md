@@ -46,12 +46,13 @@ O projeto tem como intuito automatizar dois fluxos distintos, tanto teste Web co
 ## 🔧 Como usar
 
 - Ter o Python 3.13.2 :snake: instalado na sua maquina
-- IDE da sua escolha mas recomendamos o VSCode
+- Ter a IDE do VSCode instalada
 - Instalar a extensão do VSCode RobotCode
 - Criar um ambiente venv e instalar dependências 
     ```python -m venv venv
-    venv/Scripts/activate```
+    venv/Scripts/activate
 - Rodar no terminal o <code>pip install -r requirements.txt</code> que vai instalar todas as dependências
+- Para executar apenas clicar no botão de "executar" do proprio VSCode porque temos uma configuração no robot.toml que funciona na execução do programa
 
 ## 🖥️ Tecnologias implementadas
 
