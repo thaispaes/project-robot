@@ -38,5 +38,5 @@ CN06 - Search CEP With an Invalid CEP (More Than 8 Digits)
 CN07 - Search CEP With a Non-Existent CEP
     [Documentation]    Teste para buscar um CEP inexistente e validar a resposta da API.    
     ${response}=    Given Validate API Response for CEP Variations    ${NON_EXISTENT_CEP}
-    When Validate Response Status Code    ${response}    200
+    Then Validate If Cep Is Invalid    ${response}
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-09-08T11:48:07.491224" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-09-08T14:28:26.869200" rpa="false" schemaversion="5">
 <suite id="s1" name="Project-Robot" source="C:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\project-robot">
 <suite id="s1-s1" name="Tests" source="C:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\project-robot\tests">
 <suite id="s1-s1-s1" name="Api" source="C:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\project-robot\tests\api">
@@ -8,31 +8,31 @@
 <kw name="Given Validate Successful API Response for CEP" owner="ValidateCep">
 <kw name="Create Sessions API" owner="ValidateCep">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:12.072263" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-09-08T14:28:27.789025" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>api_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-09-08T11:48:12.071611" elapsed="0.002213"/>
+<status status="PASS" start="2025-09-08T14:28:27.788489" elapsed="0.001089"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:12.075592" level="INFO">Sessao criada com sucesso.</msg>
+<msg time="2025-09-08T14:28:27.790358" level="INFO">Sessao criada com sucesso.</msg>
 <arg>Sessao criada com sucesso.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:12.074601" elapsed="0.001541"/>
+<status status="PASS" start="2025-09-08T14:28:27.789861" elapsed="0.000759"/>
 </kw>
 <arg>${BASE_URL}</arg>
 <doc>Criar a sessao para a API</doc>
-<status status="PASS" start="2025-09-08T11:48:12.070643" elapsed="0.005800"/>
+<status status="PASS" start="2025-09-08T14:28:27.787538" elapsed="0.003242"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:15.538365" level="INFO">GET Request : url=https://viacep.com.br/ws/20040002/json/ 
+<msg time="2025-09-08T14:28:28.385569" level="INFO">GET Request : url=https://viacep.com.br/ws/20040002/json/ 
  path_url=/ws/20040002/json/ 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-09-08T11:48:15.538914" level="INFO">GET Response : url=https://viacep.com.br/ws/20040002/json/ 
+<msg time="2025-09-08T14:28:28.385985" level="INFO">GET Response : url=https://viacep.com.br/ws/20040002/json/ 
  status=200, reason=OK 
- headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 14:48:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Expires': 'Mon, 08 Sep 2025 15:48:15 GMT', 'Cache-Control': 'max-age=3600, public', 'Pragma': 'public', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET', 'Access-Control-Allow-Headers': 'Content-Type, X-Request-With, X-Requested-By', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400'} 
+ headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 17:28:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Expires': 'Mon, 08 Sep 2025 18:28:28 GMT', 'Cache-Control': 'max-age=3600, public', 'Pragma': 'public', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET', 'Access-Control-Allow-Headers': 'Content-Type, X-Request-With, X-Requested-By', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400'} 
  body={
   "cep": "20040-002",
   "logradouro": "Avenida Rio Branco",
@@ -49,23 +49,23 @@
   "siafi": "6001"
 } 
  </msg>
-<msg time="2025-09-08T11:48:15.539540" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-08T14:28:28.386472" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-09-08T11:48:15.542460" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-09-08T14:28:28.388883" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>api_session</arg>
 <arg>/ws/${valid_cep}/json/</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-09-08T11:48:12.076751" elapsed="3.466251"/>
+<status status="PASS" start="2025-09-08T14:28:27.790940" elapsed="0.598402"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:15.544826" level="INFO">Status code: 200</msg>
+<msg time="2025-09-08T14:28:28.390979" level="INFO">Status code: 200</msg>
 <arg>Status code: ${response.status_code}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.543504" elapsed="0.001694"/>
+<status status="PASS" start="2025-09-08T14:28:28.389719" elapsed="0.001720"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:15.546853" level="INFO">Resposta: {
+<msg time="2025-09-08T14:28:28.392539" level="INFO">Resposta: {
   "cep": "20040-002",
   "logradouro": "Avenida Rio Branco",
   "complemento": "de 128 a 144 - lado par",
@@ -82,116 +82,116 @@
 }</msg>
 <arg>Resposta: ${response.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.545539" elapsed="0.001696"/>
+<status status="PASS" start="2025-09-08T14:28:28.391742" elapsed="0.001008"/>
 </kw>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:15.548434" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:28.393363" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${response}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.547671" elapsed="0.001117"/>
+<status status="PASS" start="2025-09-08T14:28:28.392939" elapsed="0.000708"/>
 </kw>
-<msg time="2025-09-08T11:48:15.549147" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-09-08T14:28:28.393873" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>${VALID_CEP}</arg>
 <doc>Validar a resposta bem-sucedida da API para um CEP válido.</doc>
-<status status="PASS" start="2025-09-08T11:48:12.067391" elapsed="3.482034"/>
+<status status="PASS" start="2025-09-08T14:28:27.785621" elapsed="0.608424"/>
 </kw>
 <kw name="When Validate Response Status Code" owner="ValidateCep">
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-09-08T11:48:15.571373" level="INFO">Argument types are:
+<msg time="2025-09-08T14:28:28.396693" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>${expected_status_code}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.570065" elapsed="0.002000"/>
+<status status="PASS" start="2025-09-08T14:28:28.396163" elapsed="0.000997"/>
 </kw>
 <arg>${response}</arg>
 <arg>200</arg>
 <doc>Validar o status code da resposta da API.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.566900" elapsed="0.005573"/>
+<status status="PASS" start="2025-09-08T14:28:28.394970" elapsed="0.002504"/>
 </kw>
 <kw name="Then Validate If Cep Is Valid" owner="ValidateCep">
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-08T11:48:15.593078" level="INFO">${response_json} = 20040-002</msg>
+<msg time="2025-09-08T14:28:28.404016" level="INFO">${response_json} = 20040-002</msg>
 <var>${response_json}</var>
 <arg>${response.json()}</arg>
 <arg>cep</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.591549" elapsed="0.002070"/>
+<status status="PASS" start="2025-09-08T14:28:28.402960" elapsed="0.001514"/>
 </kw>
 <kw name="Remove Hifen From CEP" owner="ValidateCep">
 <kw name="Replace String" owner="String">
-<msg time="2025-09-08T11:48:15.596231" level="INFO">${cep_json} = 20040002</msg>
+<msg time="2025-09-08T14:28:28.407036" level="INFO">${cep_json} = 20040002</msg>
 <var>${cep_json}</var>
 <arg>${cep}</arg>
 <arg>-</arg>
 <arg>${EMPTY}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.594968" elapsed="0.001658"/>
+<status status="PASS" start="2025-09-08T14:28:28.405894" elapsed="0.001509"/>
 </kw>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:15.597596" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:28.408058" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${cep_json}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.596992" elapsed="0.001145"/>
+<status status="PASS" start="2025-09-08T14:28:28.407651" elapsed="0.000611"/>
 </kw>
-<msg time="2025-09-08T11:48:15.598507" level="INFO">${response_json} = 20040002</msg>
+<msg time="2025-09-08T14:28:28.408435" level="INFO">${response_json} = 20040002</msg>
 <var>${response_json}</var>
 <arg>${response_json}</arg>
 <doc>Remover o hífen do CEP, se presente.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.594043" elapsed="0.004707"/>
+<status status="PASS" start="2025-09-08T14:28:28.404787" elapsed="0.003810"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_json}</arg>
 <arg>${expected_cep}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.599063" elapsed="0.000730"/>
+<status status="PASS" start="2025-09-08T14:28:28.408793" elapsed="0.000519"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:15.600590" level="INFO">CEP válido.</msg>
-<arg>CEP válido.</arg>
+<msg time="2025-09-08T14:28:28.409781" level="INFO">CEP 20040002 válido.</msg>
+<arg>CEP ${expected_cep} válido.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.600045" elapsed="0.000834"/>
+<status status="PASS" start="2025-09-08T14:28:28.409472" elapsed="0.000488"/>
 </kw>
 <arg>${response}</arg>
 <arg>${VALID_CEP}</arg>
 <doc>Validar se o CEP é válido.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.587533" elapsed="0.013556"/>
+<status status="PASS" start="2025-09-08T14:28:28.399391" elapsed="0.010697"/>
 </kw>
 <doc>Teste para buscar um CEP válido e validar a resposta da API.</doc>
-<status status="PASS" start="2025-09-08T11:48:12.050450" elapsed="3.570037"/>
+<status status="PASS" start="2025-09-08T14:28:27.781577" elapsed="0.629846"/>
 </test>
 <test id="s1-s1-s1-s1-t2" name="CN02 - Search CEP With an Invalid CEP (Special Characters)" line="13">
 <kw name="Given Validate API Response for CEP Variations" owner="ValidateCep">
 <kw name="Create Sessions API" owner="ValidateCep">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:15.643477" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-09-08T14:28:28.514814" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>api_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-09-08T11:48:15.642613" elapsed="0.001706"/>
+<status status="PASS" start="2025-09-08T14:28:28.514403" elapsed="0.000787"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:15.645303" level="INFO">Sessao criada com sucesso.</msg>
+<msg time="2025-09-08T14:28:28.515716" level="INFO">Sessao criada com sucesso.</msg>
 <arg>Sessao criada com sucesso.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.644669" elapsed="0.001143"/>
+<status status="PASS" start="2025-09-08T14:28:28.515393" elapsed="0.000600"/>
 </kw>
 <arg>${BASE_URL}</arg>
 <doc>Criar a sessao para a API</doc>
-<status status="PASS" start="2025-09-08T11:48:15.641479" elapsed="0.004574"/>
+<status status="PASS" start="2025-09-08T14:28:28.513788" elapsed="0.002386"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:16.408307" level="INFO">GET Request : url=https://viacep.com.br/ws/2004@002/json/ 
- path_url=/ws/2004@002/json/ 
+<msg time="2025-09-08T14:28:29.034959" level="INFO">GET Request : url=https://viacep.com.br/ws/2004@002/json 
+ path_url=/ws/2004@002/json 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-09-08T11:48:16.408740" level="INFO">GET Response : url=https://viacep.com.br/ws/2004@002/json/ 
+<msg time="2025-09-08T14:28:29.035344" level="INFO">GET Response : url=https://viacep.com.br/ws/2004@002/json 
  status=400, reason=Bad Request 
- headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 14:48:16 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
+ headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 17:28:29 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
  body=&lt;!DOCTYPE HTML&gt;
 &lt;html lang="pt-br"&gt;
 
@@ -224,118 +224,144 @@
 &lt;/html&gt;
  
  </msg>
-<msg time="2025-09-08T11:48:16.409205" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-08T14:28:29.036055" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-09-08T11:48:16.421454" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json/</msg>
+<msg time="2025-09-08T14:28:29.045805" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json</msg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-09-08T11:48:15.647048" elapsed="0.785316">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json/</status>
+<status status="FAIL" start="2025-09-08T14:28:28.517033" elapsed="0.553519">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json</status>
 </kw>
-<msg time="2025-09-08T11:48:16.432737" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json/')</msg>
+<msg time="2025-09-08T14:28:29.070991" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json')</msg>
 <var>${response}</var>
 <arg>Get On Session</arg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.646335" elapsed="0.786905"/>
+<status status="PASS" start="2025-09-08T14:28:28.516408" elapsed="0.555341"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:16.434442" level="INFO">Status code: 404 FAIL</msg>
-<arg>Status code: 404 ${response}[0]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.433619" elapsed="0.001863"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.074037" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.072316" elapsed="0.001990"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}'== 'FAIL'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:16.436836" level="INFO">Resposta: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json/</msg>
-<arg>Resposta: ${response}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.436046" elapsed="0.001204"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:16.439617" level="WARN">CEP inválido ou caracteres especiais: 2004@002</msg>
+<msg time="2025-09-08T14:28:29.076218" level="WARN">CEP inválido ou caracteres especiais: 2004@002</msg>
 <arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
 <arg>WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.438756" elapsed="0.024074"/>
+<status status="PASS" start="2025-09-08T14:28:29.075510" elapsed="0.139253"/>
 </kw>
-<arg>'${response}[0]'=='FAIL'</arg>
-<arg>Log</arg>
-<arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
-<arg>WARN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.437588" elapsed="0.025703"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.216146" level="INFO">Status code retornado: 400 FAIL</msg>
+<arg>Status code retornado: 400 ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.215273" elapsed="0.001516"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${response}[0]'=='SUCCESS'</arg>
-<arg>Log</arg>
-<arg>CEP válido mas nao encontrado: ${invalid_cep}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.463616" elapsed="0.000732"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.217969" level="INFO">Resposta da API: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json</msg>
+<arg>Resposta da API: ${response}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.217168" elapsed="0.001152"/>
 </kw>
+<status status="PASS" start="2025-09-08T14:28:29.074617" elapsed="0.143887"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Status code: ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:29.219224" elapsed="0.000439"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Resposta do CEP ${invalid_cep}: ${response}[1] porque o CEP é válido mas nao encontrado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:29.219999" elapsed="0.000647"/>
+</kw>
+<status status="NOT RUN" start="2025-09-08T14:28:29.218637" elapsed="0.002212"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:29.074552" elapsed="0.146418"/>
+</if>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:16.465100" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:29.222247" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${response}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.464652" elapsed="0.001017"/>
+<status status="PASS" start="2025-09-08T14:28:29.221418" elapsed="0.001525"/>
 </kw>
-<msg time="2025-09-08T11:48:16.466215" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json/')</msg>
+<msg time="2025-09-08T14:28:29.223399" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/2004@002/json')</msg>
 <var>${response}</var>
 <arg>${INVALID_CEP_SPECIAL_CHAR}</arg>
 <doc>Validar a resposta da API para variações de CEP inválidos.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.638725" elapsed="0.827897"/>
+<status status="PASS" start="2025-09-08T14:28:28.511731" elapsed="0.711949"/>
 </kw>
 <kw name="Then Validate If Cep Is Invalid" owner="ValidateCep">
-<kw name="Should Match Regexp" owner="BuiltIn">
-<arg>${response}[1]</arg>
-<arg>HTTPError: 400 Client Error: Bad Request for url.*</arg>
-<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.475756" elapsed="0.000825"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.230581" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.229915" elapsed="0.000993"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}' == 'PASS'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:16.477294" level="INFO">CEP em formato inválido.</msg>
-<arg>CEP em formato inválido.</arg>
+<arg>Codigo validado! Deu ${response}[1] porque o CEP é válido mas nao encontrado</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.476847" elapsed="0.000816"/>
+<status status="NOT RUN" start="2025-09-08T14:28:29.231935" elapsed="0.000433"/>
 </kw>
+<status status="NOT RUN" start="2025-09-08T14:28:29.231200" elapsed="0.001363"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.233829" level="INFO">Status code retornado: 400 FAIL porque o CEP é inválido</msg>
+<arg>Status code retornado: 400 ${response}[0] porque o CEP é inválido</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.233133" elapsed="0.001141"/>
+</kw>
+<status status="PASS" start="2025-09-08T14:28:29.232658" elapsed="0.002090"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:29.231150" elapsed="0.003838"/>
+</if>
 <arg>${response}</arg>
 <doc>Validar se o CEP é inválido.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.471892" elapsed="0.006149"/>
+<status status="PASS" start="2025-09-08T14:28:29.226175" elapsed="0.008947"/>
 </kw>
 <doc>Teste para buscar um CEP inválido com caracteres especiais e validar a resposta da API.</doc>
-<status status="PASS" start="2025-09-08T11:48:15.631437" elapsed="0.867913"/>
+<status status="PASS" start="2025-09-08T14:28:28.505092" elapsed="0.754250"/>
 </test>
 <test id="s1-s1-s1-s1-t3" name="CN03 - Search CEP With an Invalid CEP (Spaces)" line="18">
 <kw name="Given Validate API Response for CEP Variations" owner="ValidateCep">
 <kw name="Create Sessions API" owner="ValidateCep">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:16.545304" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-09-08T14:28:29.288224" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>api_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-09-08T11:48:16.544746" elapsed="0.001028"/>
+<status status="PASS" start="2025-09-08T14:28:29.287308" elapsed="0.002301"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:16.546936" level="INFO">Sessao criada com sucesso.</msg>
+<msg time="2025-09-08T14:28:29.290667" level="INFO">Sessao criada com sucesso.</msg>
 <arg>Sessao criada com sucesso.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.546352" elapsed="0.000999"/>
+<status status="PASS" start="2025-09-08T14:28:29.289999" elapsed="0.001175"/>
 </kw>
 <arg>${BASE_URL}</arg>
 <doc>Criar a sessao para a API</doc>
-<status status="PASS" start="2025-09-08T11:48:16.543878" elapsed="0.003680"/>
+<status status="PASS" start="2025-09-08T14:28:29.286163" elapsed="0.005275"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:17.090691" level="INFO">GET Request : url=https://viacep.com.br/ws/123%2045678/json/ 
- path_url=/ws/123%2045678/json/ 
+<msg time="2025-09-08T14:28:29.819397" level="INFO">GET Request : url=https://viacep.com.br/ws/123%2045678/json 
+ path_url=/ws/123%2045678/json 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-09-08T11:48:17.091098" level="INFO">GET Response : url=https://viacep.com.br/ws/123%2045678/json/ 
+<msg time="2025-09-08T14:28:29.820022" level="INFO">GET Response : url=https://viacep.com.br/ws/123%2045678/json 
  status=400, reason=Bad Request 
- headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 14:48:17 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
+ headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 17:28:30 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
  body=&lt;!DOCTYPE HTML&gt;
 &lt;html lang="pt-br"&gt;
 
@@ -368,118 +394,144 @@
 &lt;/html&gt;
  
  </msg>
-<msg time="2025-09-08T11:48:17.092916" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-08T14:28:29.822037" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-09-08T11:48:17.117575" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json/</msg>
+<msg time="2025-09-08T14:28:29.823309" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json</msg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-09-08T11:48:16.548732" elapsed="0.577267">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json/</status>
+<status status="FAIL" start="2025-09-08T14:28:29.292517" elapsed="0.538159">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json</status>
 </kw>
-<msg time="2025-09-08T11:48:17.126393" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json/')</msg>
+<msg time="2025-09-08T14:28:29.830974" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json')</msg>
 <var>${response}</var>
 <arg>Get On Session</arg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.548012" elapsed="0.578868"/>
+<status status="PASS" start="2025-09-08T14:28:29.291732" elapsed="0.539432"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.128277" level="INFO">Status code: 404 FAIL</msg>
-<arg>Status code: 404 ${response}[0]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.127411" elapsed="0.001282"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.831952" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.831395" elapsed="0.000721"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}'== 'FAIL'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.129595" level="INFO">Resposta: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json/</msg>
-<arg>Resposta: ${response}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.128982" elapsed="0.001012"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.131800" level="WARN">CEP inválido ou caracteres especiais: 123 45678</msg>
+<msg time="2025-09-08T14:28:29.833390" level="WARN">CEP inválido ou caracteres especiais: 123 45678</msg>
 <arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
 <arg>WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.131168" elapsed="0.043703"/>
+<status status="PASS" start="2025-09-08T14:28:29.832898" elapsed="0.011381"/>
 </kw>
-<arg>'${response}[0]'=='FAIL'</arg>
-<arg>Log</arg>
-<arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
-<arg>WARN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.130300" elapsed="0.044854"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.845337" level="INFO">Status code retornado: 400 FAIL</msg>
+<arg>Status code retornado: 400 ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.844659" elapsed="0.000992"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${response}[0]'=='SUCCESS'</arg>
-<arg>Log</arg>
-<arg>CEP válido mas nao encontrado: ${invalid_cep}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.175430" elapsed="0.000722"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.846328" level="INFO">Resposta da API: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json</msg>
+<arg>Resposta da API: ${response}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.845845" elapsed="0.000903"/>
 </kw>
+<status status="PASS" start="2025-09-08T14:28:29.832305" elapsed="0.014595"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Status code: ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:29.847466" elapsed="0.000464"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Resposta do CEP ${invalid_cep}: ${response}[1] porque o CEP é válido mas nao encontrado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:29.848156" elapsed="0.000274"/>
+</kw>
+<status status="NOT RUN" start="2025-09-08T14:28:29.846996" elapsed="0.001541"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:29.832275" elapsed="0.016321"/>
+</if>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.176879" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:29.849086" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${response}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.176422" elapsed="0.001038"/>
+<status status="PASS" start="2025-09-08T14:28:29.848698" elapsed="0.000819"/>
 </kw>
-<msg time="2025-09-08T11:48:17.177820" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json/')</msg>
+<msg time="2025-09-08T14:28:29.849798" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123%2045678/json')</msg>
 <var>${response}</var>
 <arg>${INVALID_CEP_SPACES}</arg>
 <doc>Validar a resposta da API para variações de CEP inválidos.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.541403" elapsed="0.636719"/>
+<status status="PASS" start="2025-09-08T14:28:29.284176" elapsed="0.565805"/>
 </kw>
 <kw name="Then Validate If Cep Is Invalid" owner="ValidateCep">
-<kw name="Should Match Regexp" owner="BuiltIn">
-<arg>${response}[1]</arg>
-<arg>HTTPError: 400 Client Error: Bad Request for url.*</arg>
-<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.184583" elapsed="0.000676"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.855684" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.854955" elapsed="0.001266"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}' == 'PASS'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.186053" level="INFO">CEP em formato inválido.</msg>
-<arg>CEP em formato inválido.</arg>
+<arg>Codigo validado! Deu ${response}[1] porque o CEP é válido mas nao encontrado</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.185550" elapsed="0.001054"/>
+<status status="NOT RUN" start="2025-09-08T14:28:29.857061" elapsed="0.000362"/>
 </kw>
+<status status="NOT RUN" start="2025-09-08T14:28:29.856469" elapsed="0.001219"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:29.858987" level="INFO">Status code retornado: 400 FAIL porque o CEP é inválido</msg>
+<arg>Status code retornado: 400 ${response}[0] porque o CEP é inválido</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:29.858459" elapsed="0.000817"/>
+</kw>
+<status status="PASS" start="2025-09-08T14:28:29.858030" elapsed="0.001393"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:29.856426" elapsed="0.003063"/>
+</if>
 <arg>${response}</arg>
 <doc>Validar se o CEP é inválido.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.181237" elapsed="0.005586"/>
+<status status="PASS" start="2025-09-08T14:28:29.851727" elapsed="0.007847"/>
 </kw>
 <doc>Teste para buscar um CEP inválido com espaços e validar a resposta da API.</doc>
-<status status="PASS" start="2025-09-08T11:48:16.519562" elapsed="0.672852"/>
+<status status="PASS" start="2025-09-08T14:28:29.269696" elapsed="0.592744"/>
 </test>
 <test id="s1-s1-s1-s1-t4" name="CN04 - Search CEP With an Invalid CEP (Letters)" line="23">
 <kw name="Given Validate API Response for CEP Variations" owner="ValidateCep">
 <kw name="Create Sessions API" owner="ValidateCep">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:17.211973" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-09-08T14:28:29.879197" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>api_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-09-08T11:48:17.211338" elapsed="0.001410"/>
+<status status="PASS" start="2025-09-08T14:28:29.878779" elapsed="0.001010"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.214018" level="INFO">Sessao criada com sucesso.</msg>
+<msg time="2025-09-08T14:28:29.880439" level="INFO">Sessao criada com sucesso.</msg>
 <arg>Sessao criada com sucesso.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.213377" elapsed="0.000938"/>
+<status status="PASS" start="2025-09-08T14:28:29.880055" elapsed="0.000607"/>
 </kw>
 <arg>${BASE_URL}</arg>
 <doc>Criar a sessao para a API</doc>
-<status status="PASS" start="2025-09-08T11:48:17.210410" elapsed="0.004111"/>
+<status status="PASS" start="2025-09-08T14:28:29.878186" elapsed="0.002613"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:17.850243" level="INFO">GET Request : url=https://viacep.com.br/ws/12A45B78/json/ 
- path_url=/ws/12A45B78/json/ 
+<msg time="2025-09-08T14:28:30.397312" level="INFO">GET Request : url=https://viacep.com.br/ws/12A45B78/json 
+ path_url=/ws/12A45B78/json 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-09-08T11:48:17.851059" level="INFO">GET Response : url=https://viacep.com.br/ws/12A45B78/json/ 
+<msg time="2025-09-08T14:28:30.397541" level="INFO">GET Response : url=https://viacep.com.br/ws/12A45B78/json 
  status=400, reason=Bad Request 
- headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 14:48:18 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
+ headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 17:28:30 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
  body=&lt;!DOCTYPE HTML&gt;
 &lt;html lang="pt-br"&gt;
 
@@ -512,118 +564,144 @@
 &lt;/html&gt;
  
  </msg>
-<msg time="2025-09-08T11:48:17.851621" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-08T14:28:30.397689" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-09-08T11:48:17.854416" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json/</msg>
+<msg time="2025-09-08T14:28:30.398340" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json</msg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-09-08T11:48:17.215426" elapsed="0.657416">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json/</status>
+<status status="FAIL" start="2025-09-08T14:28:29.881409" elapsed="0.522466">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json</status>
 </kw>
-<msg time="2025-09-08T11:48:17.873512" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json/')</msg>
+<msg time="2025-09-08T14:28:30.404134" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json')</msg>
 <var>${response}</var>
 <arg>Get On Session</arg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.214777" elapsed="0.659269"/>
+<status status="PASS" start="2025-09-08T14:28:29.880954" elapsed="0.523396"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.875229" level="INFO">Status code: 404 FAIL</msg>
-<arg>Status code: 404 ${response}[0]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.874454" elapsed="0.001213"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.404990" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.404538" elapsed="0.000637"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}'== 'FAIL'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.876623" level="INFO">Resposta: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json/</msg>
-<arg>Resposta: ${response}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.875971" elapsed="0.001080"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.878724" level="WARN">CEP inválido ou caracteres especiais: 12A45B78</msg>
+<msg time="2025-09-08T14:28:30.406163" level="WARN">CEP inválido ou caracteres especiais: 12A45B78</msg>
 <arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
 <arg>WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.878120" elapsed="0.017716"/>
+<status status="PASS" start="2025-09-08T14:28:30.405735" elapsed="0.008126"/>
 </kw>
-<arg>'${response}[0]'=='FAIL'</arg>
-<arg>Log</arg>
-<arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
-<arg>WARN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.877356" elapsed="0.018788"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.414743" level="INFO">Status code retornado: 400 FAIL</msg>
+<arg>Status code retornado: 400 ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.414161" elapsed="0.000784"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${response}[0]'=='SUCCESS'</arg>
-<arg>Log</arg>
-<arg>CEP válido mas nao encontrado: ${invalid_cep}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.896483" elapsed="0.000862"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.415525" level="INFO">Resposta da API: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json</msg>
+<arg>Resposta da API: ${response}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.415104" elapsed="0.000624"/>
 </kw>
+<status status="PASS" start="2025-09-08T14:28:30.405326" elapsed="0.010489"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Status code: ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:30.416170" elapsed="0.000209"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Resposta do CEP ${invalid_cep}: ${response}[1] porque o CEP é válido mas nao encontrado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:30.416527" elapsed="0.000246"/>
+</kw>
+<status status="NOT RUN" start="2025-09-08T14:28:30.415865" elapsed="0.000995"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:30.405302" elapsed="0.011603"/>
+</if>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.898460" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:30.417233" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${response}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.897870" elapsed="0.000960"/>
+<status status="PASS" start="2025-09-08T14:28:30.416993" elapsed="0.000473"/>
 </kw>
-<msg time="2025-09-08T11:48:17.899143" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json/')</msg>
+<msg time="2025-09-08T14:28:30.417690" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/12A45B78/json')</msg>
 <var>${response}</var>
 <arg>${INVALID_CEP_LETTERS}</arg>
 <doc>Validar a resposta da API para variações de CEP inválidos.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.207816" elapsed="0.691712"/>
+<status status="PASS" start="2025-09-08T14:28:29.875900" elapsed="0.542018"/>
 </kw>
 <kw name="Then Validate If Cep Is Invalid" owner="ValidateCep">
-<kw name="Should Match Regexp" owner="BuiltIn">
-<arg>${response}[1]</arg>
-<arg>HTTPError: 400 Client Error: Bad Request for url.*</arg>
-<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.908211" elapsed="0.000809"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.421542" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.420889" elapsed="0.000859"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}' == 'PASS'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.910010" level="INFO">CEP em formato inválido.</msg>
-<arg>CEP em formato inválido.</arg>
+<arg>Codigo validado! Deu ${response}[1] porque o CEP é válido mas nao encontrado</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.909332" elapsed="0.001104"/>
+<status status="NOT RUN" start="2025-09-08T14:28:30.422723" elapsed="0.000242"/>
 </kw>
+<status status="NOT RUN" start="2025-09-08T14:28:30.422211" elapsed="0.000838"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.423595" level="INFO">Status code retornado: 400 FAIL porque o CEP é inválido</msg>
+<arg>Status code retornado: 400 ${response}[0] porque o CEP é inválido</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.423313" elapsed="0.000447"/>
+</kw>
+<status status="PASS" start="2025-09-08T14:28:30.423093" elapsed="0.000735"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:30.422150" elapsed="0.001711"/>
+</if>
 <arg>${response}</arg>
 <doc>Validar se o CEP é inválido.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.904712" elapsed="0.005952"/>
+<status status="PASS" start="2025-09-08T14:28:30.419055" elapsed="0.004849"/>
 </kw>
 <doc>Teste para buscar um CEP inválido com letras e validar a resposta da API.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.200726" elapsed="0.714268"/>
+<status status="PASS" start="2025-09-08T14:28:29.867681" elapsed="0.558033"/>
 </test>
 <test id="s1-s1-s1-s1-t5" name="CN05 - Search CEP With an Invalid CEP (Less Than 8 Digits)" line="28">
 <kw name="Given Validate API Response for CEP Variations" owner="ValidateCep">
 <kw name="Create Sessions API" owner="ValidateCep">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:17.963168" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-09-08T14:28:30.437662" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>api_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-09-08T11:48:17.961488" elapsed="0.002487"/>
+<status status="PASS" start="2025-09-08T14:28:30.437052" elapsed="0.001372"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:17.965082" level="INFO">Sessao criada com sucesso.</msg>
+<msg time="2025-09-08T14:28:30.439080" level="INFO">Sessao criada com sucesso.</msg>
 <arg>Sessao criada com sucesso.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.964376" elapsed="0.001150"/>
+<status status="PASS" start="2025-09-08T14:28:30.438628" elapsed="0.000642"/>
 </kw>
 <arg>${BASE_URL}</arg>
 <doc>Criar a sessao para a API</doc>
-<status status="PASS" start="2025-09-08T11:48:17.960402" elapsed="0.005354"/>
+<status status="PASS" start="2025-09-08T14:28:30.436307" elapsed="0.003096"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:18.538341" level="INFO">GET Request : url=https://viacep.com.br/ws/1234567/json/ 
- path_url=/ws/1234567/json/ 
+<msg time="2025-09-08T14:28:30.946586" level="INFO">GET Request : url=https://viacep.com.br/ws/1234567/json 
+ path_url=/ws/1234567/json 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-09-08T11:48:18.539620" level="INFO">GET Response : url=https://viacep.com.br/ws/1234567/json/ 
+<msg time="2025-09-08T14:28:30.946982" level="INFO">GET Response : url=https://viacep.com.br/ws/1234567/json 
  status=400, reason=Bad Request 
- headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 14:48:18 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
+ headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 17:28:31 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
  body=&lt;!DOCTYPE HTML&gt;
 &lt;html lang="pt-br"&gt;
 
@@ -656,118 +734,144 @@
 &lt;/html&gt;
  
  </msg>
-<msg time="2025-09-08T11:48:18.540760" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-08T14:28:30.947303" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-09-08T11:48:18.560051" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json/</msg>
+<msg time="2025-09-08T14:28:30.948904" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json</msg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-09-08T11:48:17.967333" elapsed="0.602230">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json/</status>
+<status status="FAIL" start="2025-09-08T14:28:30.439958" elapsed="0.514253">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json</status>
 </kw>
-<msg time="2025-09-08T11:48:18.570103" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json/')</msg>
+<msg time="2025-09-08T14:28:30.954527" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json')</msg>
 <var>${response}</var>
 <arg>Get On Session</arg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.966421" elapsed="0.604068"/>
+<status status="PASS" start="2025-09-08T14:28:30.439558" elapsed="0.515680"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:18.571756" level="INFO">Status code: 404 FAIL</msg>
-<arg>Status code: 404 ${response}[0]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.570924" elapsed="0.001282"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.956423" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.955675" elapsed="0.000938"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}'== 'FAIL'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:18.573848" level="INFO">Resposta: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json/</msg>
-<arg>Resposta: ${response}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.573053" elapsed="0.001121"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:18.576420" level="WARN">CEP inválido ou caracteres especiais: 1234567</msg>
+<msg time="2025-09-08T14:28:30.957744" level="WARN">CEP inválido ou caracteres especiais: 1234567</msg>
 <arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
 <arg>WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.575458" elapsed="0.174475"/>
+<status status="PASS" start="2025-09-08T14:28:30.957314" elapsed="0.008353"/>
 </kw>
-<arg>'${response}[0]'=='FAIL'</arg>
-<arg>Log</arg>
-<arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
-<arg>WARN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.574514" elapsed="0.175980"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.966778" level="INFO">Status code retornado: 400 FAIL</msg>
+<arg>Status code retornado: 400 ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.965988" elapsed="0.001050"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${response}[0]'=='SUCCESS'</arg>
-<arg>Log</arg>
-<arg>CEP válido mas nao encontrado: ${invalid_cep}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.750903" elapsed="0.000847"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.967811" level="INFO">Resposta da API: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json</msg>
+<arg>Resposta da API: ${response}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.967285" elapsed="0.000794"/>
 </kw>
+<status status="PASS" start="2025-09-08T14:28:30.956773" elapsed="0.011436"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Status code: ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:30.968657" elapsed="0.000270"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Resposta do CEP ${invalid_cep}: ${response}[1] porque o CEP é válido mas nao encontrado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:30.969135" elapsed="0.000255"/>
+</kw>
+<status status="NOT RUN" start="2025-09-08T14:28:30.968281" elapsed="0.001210"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:30.956743" elapsed="0.012808"/>
+</if>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:18.753103" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:30.970114" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${response}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.752081" elapsed="0.001714"/>
+<status status="PASS" start="2025-09-08T14:28:30.969687" elapsed="0.000852"/>
 </kw>
-<msg time="2025-09-08T11:48:18.754240" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json/')</msg>
+<msg time="2025-09-08T14:28:30.970859" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/1234567/json')</msg>
 <var>${response}</var>
 <arg>${INVALID_CEP_LESS_THAN_8}</arg>
 <doc>Validar a resposta da API para variações de CEP inválidos.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.957455" elapsed="0.797048"/>
+<status status="PASS" start="2025-09-08T14:28:30.435112" elapsed="0.536103"/>
 </kw>
 <kw name="Then Validate If Cep Is Invalid" owner="ValidateCep">
-<kw name="Should Match Regexp" owner="BuiltIn">
-<arg>${response}[1]</arg>
-<arg>HTTPError: 400 Client Error: Bad Request for url.*</arg>
-<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.808054" elapsed="0.000855"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.976874" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.976435" elapsed="0.000744"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}' == 'PASS'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:18.809747" level="INFO">CEP em formato inválido.</msg>
-<arg>CEP em formato inválido.</arg>
+<arg>Codigo validado! Deu ${response}[1] porque o CEP é válido mas nao encontrado</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.809228" elapsed="0.000911"/>
+<status status="NOT RUN" start="2025-09-08T14:28:30.978298" elapsed="0.000435"/>
 </kw>
+<status status="NOT RUN" start="2025-09-08T14:28:30.977380" elapsed="0.001551"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:30.980017" level="INFO">Status code retornado: 400 FAIL porque o CEP é inválido</msg>
+<arg>Status code retornado: 400 ${response}[0] porque o CEP é inválido</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:30.979445" elapsed="0.000976"/>
+</kw>
+<status status="PASS" start="2025-09-08T14:28:30.979063" elapsed="0.001500"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:30.977341" elapsed="0.003287"/>
+</if>
 <arg>${response}</arg>
 <doc>Validar se o CEP é inválido.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.803137" elapsed="0.007194"/>
+<status status="PASS" start="2025-09-08T14:28:30.974669" elapsed="0.006046"/>
 </kw>
 <doc>Teste para buscar um CEP inválido com menos de 8 dígitos e validar a resposta da API.</doc>
-<status status="PASS" start="2025-09-08T11:48:17.950849" elapsed="0.867185"/>
+<status status="PASS" start="2025-09-08T14:28:30.431312" elapsed="0.555177"/>
 </test>
 <test id="s1-s1-s1-s1-t6" name="CN06 - Search CEP With an Invalid CEP (More Than 8 Digits)" line="33">
 <kw name="Given Validate API Response for CEP Variations" owner="ValidateCep">
 <kw name="Create Sessions API" owner="ValidateCep">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:18.865989" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-09-08T14:28:31.025932" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>api_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-09-08T11:48:18.865169" elapsed="0.001642"/>
+<status status="PASS" start="2025-09-08T14:28:31.025347" elapsed="0.001107"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:18.868015" level="INFO">Sessao criada com sucesso.</msg>
+<msg time="2025-09-08T14:28:31.027320" level="INFO">Sessao criada com sucesso.</msg>
 <arg>Sessao criada com sucesso.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.867149" elapsed="0.001327"/>
+<status status="PASS" start="2025-09-08T14:28:31.026786" elapsed="0.000910"/>
 </kw>
 <arg>${BASE_URL}</arg>
 <doc>Criar a sessao para a API</doc>
-<status status="PASS" start="2025-09-08T11:48:18.863959" elapsed="0.004772"/>
+<status status="PASS" start="2025-09-08T14:28:31.024514" elapsed="0.003385"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:20.539613" level="INFO">GET Request : url=https://viacep.com.br/ws/123456789/json/ 
- path_url=/ws/123456789/json/ 
+<msg time="2025-09-08T14:28:31.633285" level="INFO">GET Request : url=https://viacep.com.br/ws/123456789/json 
+ path_url=/ws/123456789/json 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-09-08T11:48:20.540407" level="INFO">GET Response : url=https://viacep.com.br/ws/123456789/json/ 
+<msg time="2025-09-08T14:28:31.633748" level="INFO">GET Response : url=https://viacep.com.br/ws/123456789/json 
  status=400, reason=Bad Request 
- headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 14:48:20 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
+ headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 17:28:31 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '494', 'Connection': 'close', 'ETag': '"6242f812-1ee"', 'Strict-Transport-Security': 'max-age=63072000'} 
  body=&lt;!DOCTYPE HTML&gt;
 &lt;html lang="pt-br"&gt;
 
@@ -800,118 +904,144 @@
 &lt;/html&gt;
  
  </msg>
-<msg time="2025-09-08T11:48:20.543141" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-08T14:28:31.635300" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-09-08T11:48:20.565591" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json/</msg>
+<msg time="2025-09-08T14:28:31.636774" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json</msg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="FAIL" start="2025-09-08T11:48:18.869747" elapsed="1.706577">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json/</status>
+<status status="FAIL" start="2025-09-08T14:28:31.028651" elapsed="0.614421">HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json</status>
 </kw>
-<msg time="2025-09-08T11:48:20.576944" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json/')</msg>
+<msg time="2025-09-08T14:28:31.643272" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json')</msg>
 <var>${response}</var>
 <arg>Get On Session</arg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.869052" elapsed="1.708274"/>
+<status status="PASS" start="2025-09-08T14:28:31.028124" elapsed="0.615312"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:20.578715" level="INFO">Status code: 404 FAIL</msg>
-<arg>Status code: 404 ${response}[0]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.577809" elapsed="0.001426"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:31.644378" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:31.643676" elapsed="0.000892"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}'== 'FAIL'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:20.580576" level="INFO">Resposta: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json/</msg>
-<arg>Resposta: ${response}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.579662" elapsed="0.001502"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:20.583897" level="WARN">CEP inválido ou caracteres especiais: 123456789</msg>
+<msg time="2025-09-08T14:28:31.645752" level="WARN">CEP inválido ou caracteres especiais: 123456789</msg>
 <arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
 <arg>WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.582891" elapsed="0.122419"/>
+<status status="PASS" start="2025-09-08T14:28:31.645309" elapsed="0.008245"/>
 </kw>
-<arg>'${response}[0]'=='FAIL'</arg>
-<arg>Log</arg>
-<arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
-<arg>WARN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.581699" elapsed="0.124175"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:31.654908" level="INFO">Status code retornado: 400 FAIL</msg>
+<arg>Status code retornado: 400 ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:31.653865" elapsed="0.001362"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${response}[0]'=='SUCCESS'</arg>
-<arg>Log</arg>
-<arg>CEP válido mas nao encontrado: ${invalid_cep}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.710264" elapsed="0.001148"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:31.656136" level="INFO">Resposta da API: HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json</msg>
+<arg>Resposta da API: ${response}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:31.655499" elapsed="0.000861"/>
 </kw>
+<status status="PASS" start="2025-09-08T14:28:31.644781" elapsed="0.011715"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Status code: ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:31.657014" elapsed="0.000298"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Resposta do CEP ${invalid_cep}: ${response}[1] porque o CEP é válido mas nao encontrado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:31.657509" elapsed="0.000264"/>
+</kw>
+<status status="NOT RUN" start="2025-09-08T14:28:31.656573" elapsed="0.001322"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:31.644739" elapsed="0.013218"/>
+</if>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:20.712387" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:31.658470" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${response}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.711809" elapsed="0.001307"/>
+<status status="PASS" start="2025-09-08T14:28:31.658102" elapsed="0.000803"/>
 </kw>
-<msg time="2025-09-08T11:48:20.713577" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json/')</msg>
+<msg time="2025-09-08T14:28:31.659189" level="INFO">${response} = ('FAIL', 'HTTPError: 400 Client Error: Bad Request for url: https://viacep.com.br/ws/123456789/json')</msg>
 <var>${response}</var>
 <arg>${INVALID_CEP_MORE_THAN_8}</arg>
 <doc>Validar a resposta da API para variações de CEP inválidos.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.857024" elapsed="1.856923"/>
+<status status="PASS" start="2025-09-08T14:28:31.022076" elapsed="0.637287"/>
 </kw>
 <kw name="Then Validate If Cep Is Invalid" owner="ValidateCep">
-<kw name="Should Match Regexp" owner="BuiltIn">
-<arg>${response}[1]</arg>
-<arg>HTTPError: 400 Client Error: Bad Request for url.*</arg>
-<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.730183" elapsed="0.000981"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:31.664629" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:31.664046" elapsed="0.001059"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}' == 'PASS'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:20.732241" level="INFO">CEP em formato inválido.</msg>
-<arg>CEP em formato inválido.</arg>
+<arg>Codigo validado! Deu ${response}[1] porque o CEP é válido mas nao encontrado</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.731569" elapsed="0.001339"/>
+<status status="NOT RUN" start="2025-09-08T14:28:31.666302" elapsed="0.000310"/>
 </kw>
+<status status="NOT RUN" start="2025-09-08T14:28:31.665704" elapsed="0.001047"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:31.667637" level="INFO">Status code retornado: 400 FAIL porque o CEP é inválido</msg>
+<arg>Status code retornado: 400 ${response}[0] porque o CEP é inválido</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:31.667163" elapsed="0.000905"/>
+</kw>
+<status status="PASS" start="2025-09-08T14:28:31.666822" elapsed="0.001377"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:31.665622" elapsed="0.002640"/>
+</if>
 <arg>${response}</arg>
 <doc>Validar se o CEP é inválido.</doc>
-<status status="PASS" start="2025-09-08T11:48:20.725221" elapsed="0.008139"/>
+<status status="PASS" start="2025-09-08T14:28:31.661945" elapsed="0.006392"/>
 </kw>
 <doc>Teste para buscar um CEP inválido com mais de 8 dígitos e validar a resposta da API.</doc>
-<status status="PASS" start="2025-09-08T11:48:18.849557" elapsed="1.893880"/>
+<status status="PASS" start="2025-09-08T14:28:30.997407" elapsed="0.674157"/>
 </test>
 <test id="s1-s1-s1-s1-t7" name="CN07 - Search CEP With a Non-Existent CEP" line="38">
 <kw name="Given Validate API Response for CEP Variations" owner="ValidateCep">
 <kw name="Create Sessions API" owner="ValidateCep">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:21.200106" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-09-08T14:28:31.684051" level="INFO">Creating Session using : alias=api_session, url=https://viacep.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>api_session</arg>
 <arg>${base_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-09-08T11:48:21.199337" elapsed="0.001390"/>
+<status status="PASS" start="2025-09-08T14:28:31.683729" elapsed="0.000733"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:21.201772" level="INFO">Sessao criada com sucesso.</msg>
+<msg time="2025-09-08T14:28:31.684936" level="INFO">Sessao criada com sucesso.</msg>
 <arg>Sessao criada com sucesso.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:21.201083" elapsed="0.001045"/>
+<status status="PASS" start="2025-09-08T14:28:31.684619" elapsed="0.000595"/>
 </kw>
 <arg>${BASE_URL}</arg>
 <doc>Criar a sessao para a API</doc>
-<status status="PASS" start="2025-09-08T11:48:21.198184" elapsed="0.004165"/>
+<status status="PASS" start="2025-09-08T14:28:31.683246" elapsed="0.002087"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-09-08T11:48:22.097868" level="INFO">GET Request : url=https://viacep.com.br/ws/52120430/json/ 
- path_url=/ws/52120430/json/ 
+<msg time="2025-09-08T14:28:32.178015" level="INFO">GET Request : url=https://viacep.com.br/ws/52120430/json 
+ path_url=/ws/52120430/json 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-09-08T11:48:22.098895" level="INFO">GET Response : url=https://viacep.com.br/ws/52120430/json/ 
+<msg time="2025-09-08T14:28:32.178872" level="INFO">GET Response : url=https://viacep.com.br/ws/52120430/json 
  status=200, reason=OK 
- headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 14:48:22 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Expires': 'Mon, 08 Sep 2025 15:48:22 GMT', 'Cache-Control': 'max-age=3600, public', 'Pragma': 'public', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET', 'Access-Control-Allow-Headers': 'Content-Type, X-Request-With, X-Requested-By', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400'} 
+ headers={'Server': 'nginx/1.22.0', 'Date': 'Mon, 08 Sep 2025 17:28:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Expires': 'Mon, 08 Sep 2025 18:28:32 GMT', 'Cache-Control': 'max-age=3600, public', 'Pragma': 'public', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET', 'Access-Control-Allow-Headers': 'Content-Type, X-Request-With, X-Requested-By', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400'} 
  body={
   "cep": "52120-430",
   "logradouro": "Rua Major Guilherme Bonifácio",
@@ -928,103 +1058,139 @@
   "siafi": "2531"
 } 
  </msg>
-<msg time="2025-09-08T11:48:22.099354" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-08T14:28:32.179260" level="INFO">C:\Python\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'viacep.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-09-08T11:48:21.203276" elapsed="0.941878"/>
+<status status="PASS" start="2025-09-08T14:28:31.685918" elapsed="0.493733"/>
 </kw>
-<msg time="2025-09-08T11:48:22.145572" level="INFO">${response} = ('PASS', &lt;Response [200]&gt;)</msg>
+<msg time="2025-09-08T14:28:32.179838" level="INFO">${response} = ('PASS', &lt;Response [200]&gt;)</msg>
 <var>${response}</var>
 <arg>Get On Session</arg>
 <arg>api_session</arg>
-<arg>/ws/${invalid_cep}/json/</arg>
+<arg>/ws/${invalid_cep}/json</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-09-08T11:48:21.202603" elapsed="0.943302"/>
+<status status="PASS" start="2025-09-08T14:28:31.685517" elapsed="0.494558"/>
 </kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:32.181019" level="INFO">${status} = PASS</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:32.180361" elapsed="0.000793"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}'== 'FAIL'">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:22.147053" level="INFO">Status code: 404 PASS</msg>
-<arg>Status code: 404 ${response}[0]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:22.146256" elapsed="0.001199"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-09-08T11:48:22.148707" level="INFO">Resposta: &lt;Response [200]&gt;</msg>
-<arg>Resposta: ${response}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-09-08T11:48:22.147823" elapsed="0.001294"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${response}[0]'=='FAIL'</arg>
-<arg>Log</arg>
 <arg>CEP inválido ou caracteres especiais: ${invalid_cep}</arg>
 <arg>WARN</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:22.149445" elapsed="0.000792"/>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:32.182551" elapsed="0.000454"/>
 </kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>'${response}[0]'=='SUCCESS'</arg>
-<arg>Log</arg>
-<arg>CEP válido mas nao encontrado: ${invalid_cep}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-09-08T11:48:22.150682" elapsed="0.000692"/>
+<kw name="Log" owner="BuiltIn">
+<arg>Status code retornado: 400 ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:32.183297" elapsed="0.000388"/>
 </kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Resposta da API: ${response}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:32.183932" elapsed="0.000355"/>
+</kw>
+<status status="NOT RUN" start="2025-09-08T14:28:32.181454" elapsed="0.002985"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:32.185589" level="INFO">Status code: PASS</msg>
+<arg>Status code: ${response}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:32.184945" elapsed="0.001012"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:32.186653" level="INFO">Resposta do CEP 52120430: &lt;Response [200]&gt; porque o CEP é válido mas nao encontrado</msg>
+<arg>Resposta do CEP ${invalid_cep}: ${response}[1] porque o CEP é válido mas nao encontrado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:32.186119" elapsed="0.000756"/>
+</kw>
+<status status="PASS" start="2025-09-08T14:28:32.184534" elapsed="0.002452"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:32.181377" elapsed="0.005669"/>
+</if>
 <kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2025-09-08T11:48:22.152187" level="INFO">Returning from the enclosing user keyword.</msg>
+<msg time="2025-09-08T14:28:32.187650" level="INFO">Returning from the enclosing user keyword.</msg>
 <arg>${response}</arg>
 <doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2025-09-08T11:48:22.151685" elapsed="0.001074"/>
+<status status="PASS" start="2025-09-08T14:28:32.187210" elapsed="0.001006"/>
 </kw>
-<msg time="2025-09-08T11:48:22.153391" level="INFO">${response} = ('PASS', &lt;Response [200]&gt;)</msg>
+<msg time="2025-09-08T14:28:32.188666" level="INFO">${response} = ('PASS', &lt;Response [200]&gt;)</msg>
 <var>${response}</var>
 <arg>${NON_EXISTENT_CEP}</arg>
 <doc>Validar a resposta da API para variações de CEP inválidos.</doc>
-<status status="PASS" start="2025-09-08T11:48:21.194769" elapsed="0.958918"/>
+<status status="PASS" start="2025-09-08T14:28:31.681708" elapsed="0.507197"/>
 </kw>
-<kw name="When Validate Response Status Code" owner="ValidateCep">
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-09-08T11:48:22.287965" level="FAIL">Resolving variable '${response.status_code}' failed: AttributeError: 'tuple' object has no attribute 'status_code'</msg>
-<arg>${response.status_code}</arg>
-<arg>${expected_status_code}</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="FAIL" start="2025-09-08T11:48:22.286770" elapsed="0.008661">Resolving variable '${response.status_code}' failed: AttributeError: 'tuple' object has no attribute 'status_code'</status>
+<kw name="Then Validate If Cep Is Invalid" owner="ValidateCep">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-08T14:28:32.191695" level="INFO">${status} = PASS</msg>
+<var>${status}</var>
+<arg>${response}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-08T14:28:32.191377" elapsed="0.000468"/>
 </kw>
+<if>
+<branch type="IF" condition="'${status}' == 'PASS'">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-08T14:28:32.192569" level="INFO">Codigo validado! Deu &lt;Response [200]&gt; porque o CEP é válido mas nao encontrado</msg>
+<arg>Codigo validado! Deu ${response}[1] porque o CEP é válido mas nao encontrado</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-08T14:28:32.192280" elapsed="0.000429"/>
+</kw>
+<status status="PASS" start="2025-09-08T14:28:32.191961" elapsed="0.000818"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Status code retornado: 400 ${response}[0] porque o CEP é inválido</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-08T14:28:32.193072" elapsed="0.000248"/>
+</kw>
+<status status="NOT RUN" start="2025-09-08T14:28:32.192818" elapsed="0.000615"/>
+</branch>
+<status status="PASS" start="2025-09-08T14:28:32.191938" elapsed="0.001545"/>
+</if>
 <arg>${response}</arg>
-<arg>200</arg>
-<doc>Validar o status code da resposta da API.</doc>
-<status status="FAIL" start="2025-09-08T11:48:22.283940" elapsed="0.011934">Resolving variable '${response.status_code}' failed: AttributeError: 'tuple' object has no attribute 'status_code'</status>
+<doc>Validar se o CEP é inválido.</doc>
+<status status="PASS" start="2025-09-08T14:28:32.189997" elapsed="0.003568"/>
 </kw>
 <doc>Teste para buscar um CEP inexistente e validar a resposta da API.</doc>
-<status status="FAIL" start="2025-09-08T11:48:20.886040" elapsed="1.530310">Resolving variable '${response.status_code}' failed: AttributeError: 'tuple' object has no attribute 'status_code'</status>
+<status status="PASS" start="2025-09-08T14:28:31.677248" elapsed="0.517803"/>
 </test>
 <doc>Suite de testes para a API de validação de CEP</doc>
-<status status="FAIL" start="2025-09-08T11:48:08.033496" elapsed="14.942537"/>
+<status status="PASS" start="2025-09-08T14:28:26.943559" elapsed="5.257025"/>
 </suite>
-<status status="FAIL" start="2025-09-08T11:48:08.005088" elapsed="15.209255"/>
+<status status="PASS" start="2025-09-08T14:28:26.932354" elapsed="5.278342"/>
 </suite>
-<status status="FAIL" start="2025-09-08T11:48:07.994127" elapsed="15.355693"/>
+<status status="PASS" start="2025-09-08T14:28:26.927015" elapsed="5.329267"/>
 </suite>
-<status status="FAIL" start="2025-09-08T11:48:07.513833" elapsed="15.850393"/>
+<status status="PASS" start="2025-09-08T14:28:26.880690" elapsed="5.392300"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="1" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Project-Robot" id="s1" pass="6" fail="1" skip="0">Project-Robot</stat>
-<stat name="Tests" id="s1-s1" pass="6" fail="1" skip="0">Project-Robot.Tests</stat>
-<stat name="Api" id="s1-s1-s1" pass="6" fail="1" skip="0">Project-Robot.Tests.Api</stat>
-<stat name="ApiAutomation" id="s1-s1-s1-s1" pass="6" fail="1" skip="0">Project-Robot.Tests.Api.ApiAutomation</stat>
+<stat name="Project-Robot" id="s1" pass="7" fail="0" skip="0">Project-Robot</stat>
+<stat name="Tests" id="s1-s1" pass="7" fail="0" skip="0">Project-Robot.Tests</stat>
+<stat name="Api" id="s1-s1-s1" pass="7" fail="0" skip="0">Project-Robot.Tests.Api</stat>
+<stat name="ApiAutomation" id="s1-s1-s1-s1" pass="7" fail="0" skip="0">Project-Robot.Tests.Api.ApiAutomation</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-09-08T11:48:16.439617" level="WARN">CEP inválido ou caracteres especiais: 2004@002</msg>
-<msg time="2025-09-08T11:48:17.131800" level="WARN">CEP inválido ou caracteres especiais: 123 45678</msg>
-<msg time="2025-09-08T11:48:17.878724" level="WARN">CEP inválido ou caracteres especiais: 12A45B78</msg>
-<msg time="2025-09-08T11:48:18.576420" level="WARN">CEP inválido ou caracteres especiais: 1234567</msg>
-<msg time="2025-09-08T11:48:20.583897" level="WARN">CEP inválido ou caracteres especiais: 123456789</msg>
+<msg time="2025-09-08T14:28:29.076218" level="WARN">CEP inválido ou caracteres especiais: 2004@002</msg>
+<msg time="2025-09-08T14:28:29.833390" level="WARN">CEP inválido ou caracteres especiais: 123 45678</msg>
+<msg time="2025-09-08T14:28:30.406163" level="WARN">CEP inválido ou caracteres especiais: 12A45B78</msg>
+<msg time="2025-09-08T14:28:30.957744" level="WARN">CEP inválido ou caracteres especiais: 1234567</msg>
+<msg time="2025-09-08T14:28:31.645752" level="WARN">CEP inválido ou caracteres especiais: 123456789</msg>
 </errors>
 </robot>

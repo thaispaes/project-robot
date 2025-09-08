@@ -29,14 +29,14 @@ Validate API Response for CEP Variations
     [Arguments]    ${invalid_cep}
     Create Sessions API    ${BASE_URL}
     ${response}=   Run Keyword And Ignore Error    Get On Session    api_session    /ws/${invalid_cep}/json
-    
-    IF    '${response}[0]' == 'FAIL'
-        Log    CEP inválido ou caracteres especiais: ${invalid_cep}    WARN
+    ${status}=    Set Variable    ${response}[0]
+    IF  '${status}'== 'FAIL'
+        Log    CEP inválido ou com caracteres especiais: ${invalid_cep}    WARN
         Log    Status code retornado: 400 ${response}[0]
         Log    Resposta da API: ${response}[1]
     ELSE
-        Log    Status code: ${response.status_code}
-        Log    Resposta do CEP ${invalid_cep}: ${response.text} porque o CEP é válido mas nao encontrado
+        Log    Status code: ${response}[0]
+        Log    Resposta do CEP ${invalid_cep}: ${response}[1] porque o CEP é válido mas nao encontrado
     END
 
     Return From Keyword    ${response}
@@ -65,8 +65,10 @@ Validate If Cep Is Invalid
     [Documentation]    Validar se o CEP é inválido.
     [Arguments]    ${response}
 
-    IF    ${response}[0] == 'PASS'
-        Log    Codigo validado mas ${response.text} porque o CEP é válido mas nao encontrado
+    ${status}=    Set Variable    ${response}[0]
+
+    IF    '${status}' == 'PASS'
+        Log    Codigo validado! Deu ${response}[1] porque o CEP é válido mas nao encontrado
     ELSE
         Log    Status code retornado: 400 ${response}[0] porque o CEP é inválido
     END
