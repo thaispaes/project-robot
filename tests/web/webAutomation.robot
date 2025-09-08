@@ -1,13 +1,15 @@
 *** Settings ***
 Documentation    Testes relacionados a pagina de HOME da aplicacao
 
+# Libraries e Resources
 Resource    ../../resources/Web.resource
 
-Test Setup    Access Page
-Test Teardown    Close Browser
-
+# Teste incial e final da suite de teste
+Suite Setup    Access Page
+Suite Teardown    Close Browser
 
 *** Test Cases ***
+# Teste de busca de produto com sucesso na aplicacao
 Find product with success
     [Documentation]    Validar a busca de um produto na aplicacao
     Given Search The Product In Application    ${PRODUCT}

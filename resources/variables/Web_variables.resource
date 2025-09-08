@@ -1,8 +1,9 @@
 *** Settings ***
-Documentation    Global variables archive
+Documentation    Arquivo de variaveis globais para testes web
 
 
 *** Variables ***
+# Variaveis de ambiente
 ${PRODUCT}=    notebook
 ${PRODUCT_SELECTED}=    ${EMPTY}
 ${CEP_HIFEN}=    52071-321
