@@ -3,10 +3,11 @@ Documentation    Acoes e elementos da pagina inicial de informacoes do produto
 
 Library    SeleniumLibrary
 
-Resource    variables/Web_variables.robot
+Resource    variables/Web_variables.resource
 Resource    Base.resource
 
-*** Variables ***   
+
+*** Variables ***
 ${SHIPPING_INPUT}    //input[@id='inputCalcularFrete']
 ${SHIPPING_SECTION}    //section[@id='blocoCalcularFrete']
 ${SHIPPING_SECTION_CLOSE}    //button[@id='botaoAlterarCEP']
@@ -15,40 +16,46 @@ ${BUY_BUTTON}    //button//span[text()="Comprar agora" or text()="COMPRAR AGORA"
 
 
 *** Keywords ***
-Validate product selected info page
+Validate Product Selected Info Page
+    [Documentation]    Validar se o produto da pagina foi o produto selecionado
     Element Should Be Visible    //h1[text()='${PRODUCT_SELECTED}']
 
-Search for shipping options
-    Scroll to see element    ${SCROLL}
+Search For Shipping Options
+    [Documentation]    Buscar as opcoes de frete para o produto selecionado
+    Scroll To See Element    ${SCROLL}
     Element Should Be Visible    ${SHIPPING_INPUT}
-    Click Element    ${SHIPPING_INPUT}   
+    Click Element    ${SHIPPING_INPUT}
     Input Text    ${SHIPPING_INPUT}    ${CEP}
     Wait Until Element Is Visible    ${SHIPPING_SECTION}//div//span[contains=(text()='CEP: 52071-321')][2]    timeout=10s
-    #Validate shipping types NOT WORKING
+    Validate Shipping Types
     Capture Page Screenshot
 
-Validate shipping types
-   Element Should Be Visible    ${SHIPPING_SECTION}
-   Scroll to see element    ${SHIPPING_SECTION}
+Validate Shipping Types
+    [Documentation]    Validar os tipos de frete disponiveis
+    Element Should Be Visible    ${SHIPPING_SECTION}
+    Scroll To See Element    ${SHIPPING_SECTION}
 
-Closing shipping options section
+Closing Shipping Options Section
+    [Documentation]    Fechar a sessao de opcoes de frete
     Element Should Be Visible    ${SHIPPING_SECTION}
     Click Element    ${SHIPPING_SECTION_CLOSE}
     Sleep    5s
     Wait Until Element Is Visible    ${SHIPPING_INPUT}
     Capture Page Screenshot
 
-Select to buy the product
-    Scroll to see element    ${SCROLL}
+Select To Buy The Product
+    [Documentation]    Selecionar o produto para compra e validar se o produto foi adicionado ao carrinho
+    Scroll To See Element    ${SCROLL}
     Click Element    ${BUY_BUTTON}
     Sleep    5s
     Capture Page Screenshot
-    Validate if warranty and insurance is selected
+    Validate If Warranty And Insurance Is Selected
     Sleep    5s
-    Validate if the product is add in the cart
+    Validate If The Product Is Added In The Cart
     Sleep    3s
-    Go to shopping cart
-    
+    Go To Shopping Cart
+
+
 
 
 

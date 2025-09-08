@@ -11,14 +11,16 @@ ${PRODUCT_LIST}    //ul[@data-testid='searchbar-dropdown-menu']
 
 
 *** Keywords ***
-Search the product in application
+Search The Product In Application
+    [Documentation]    Realizar a busca de um produto na aplicacao
     [Arguments]    ${PRODUCT_NAME}
     Wait Until Element Is Visible    xpath=${SEARCH_INPUT}
     Click Element    xpath=${SEARCH_INPUT}
-    Writing element in input    ${PRODUCT_NAME}    ${SEARCH_INPUT}
+    Writing Element In Input    ${PRODUCT_NAME}    ${SEARCH_INPUT}
     Capture Page Screenshot
-    
-Click in the first product in list
+
+Click In The First Product In List
+    [Documentation]    Clicar no primeiro produto da lista de resultados da busca
     Wait Until Element Is Visible    xpath=${PRODUCT_LIST}
     Element Should Be Visible    xpath=${PRODUCT_LIST}
     Wait Until Element Is Visible    xpath=${PRODUCT_LIST}//li[1]
@@ -27,3 +29,4 @@ Click in the first product in list
     Set Global Variable    ${PRODUCT_SELECTED}    ${product}
     Click Element    xpath=${PRODUCT_LIST}//li[1]
     Capture Page Screenshot
+

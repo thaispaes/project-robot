@@ -18,8 +18,9 @@ Validate Correct Product In Cart
     Wait Until Element Is Visible    ${CART_TITLE}
     Element Should Be Visible    //a[text()='${PRODUCT_SELECTED}']
     Capture Page Screenshot
-    Scroll to see element    ${SCROLL_TO_ELEMENT}
+    Scroll To See Element    ${SCROLL_TO_ELEMENT}
     Sleep    3s
     Element Should Be Visible    ${WARRANTY_OPTION}
     Capture Page Screenshot
     
+

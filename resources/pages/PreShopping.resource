@@ -3,7 +3,7 @@ Documentation    Acoes e elementos da pagina pre carrinho de compras
 
 Library    SeleniumLibrary
 
-Resource    variables/Web_variables.robot
+Resource    variables/Web_variables.resource
 Resource    Base.resource
 
 *** Variables ***
@@ -13,25 +13,25 @@ ${SCROLL_ELEMENT}        //h3[text()='Informações Importantes']
 ${ADD_SERVICES_BUTTON}    //button//span[text()='Adicionar serviços']
 
 *** Keywords ***
-Validate if the product is add in the cart
+Validate If The Product Is Added In The Cart
+    [Documentation]    Validar se o produto foi adicionado no carrinho de compras
     Element Should Be Visible      ${CART_ADD_CONFIRMATION}
     Element Should Be Visible    //h2[text()='${PRODUCT_SELECTED}']
-    
 
-Validate if warranty and insurance is selected
+
+Validate If Warranty And Insurance Is Selected
+    [Documentation]    Validar se a garantia estendida e seguro estao selecionados ou nao
     Radio Button Should Be Set To    garantia    4342883
-    Scroll to see element    ${SCROLL_ELEMENT} 
+    Scroll To See Element    ${SCROLL_ELEMENT}
     Element Should Be Visible    ${INSURANCE_INPUT}
     Sleep    5s
     Select Radio Button    seguro    0
     Capture Page Screenshot
 
-Go to shopping cart 
+Go To Shopping Cart
+    [Documentation]    Acessar o carrinho de compras apos adicionar o produto e a garantia
     Element Should Be Visible    ${ADD_SERVICES_BUTTON}
     Click Element    ${ADD_SERVICES_BUTTON}
     Capture Page Screenshot
-    
-    
-
 
 

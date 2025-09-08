@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Testes relacionados a pagina de HOME da aplicacao
 
-Resource    ../../resources/Base.resource
+Resource    ../../resources/Web.resource
 
 Test Setup    Access page
 
@@ -10,9 +10,9 @@ Find product with success
     [Documentation]    Validar a busca de um produto na aplicacao
     Given Search the product in application    ${PRODUCT}
     When Click in the first product in list
-    And Validate product selected info page
-    #And Search for shipping options    
-    #And Validate shipping types - Not working
-    #And Closing shipping options section
-    And Select to buy the product
-    Then Validate Correct Product In Cart
+    And Validate Product Selected Info Page
+    #And Search For Shipping Options
+    #And Validate Shipping Types
+    #And Closing Shipping Options Section
+    #And Select To Buy The Product
+    #Then Validate Correct Product In Cart
