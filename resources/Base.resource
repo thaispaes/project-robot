@@ -3,14 +3,14 @@ Documentation     Base resource file
 
 Library       SeleniumLibrary
 
-Resource    Settings.resource
 Resource    pages/Home.resource
 Resource    pages/ProductInfo.resource
 Resource    pages/PreShopping.resource
+Resource    pages/ShoppingCart.resource
 Resource    variables/Web_variables.robot
 
-*** Keywords ***
 
+*** Keywords ***
 Access page
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -28,3 +28,4 @@ Scroll to see element
     ${ELEMENT}=    Get WebElement    ${COMPONENT}
     Scroll Element Into View    ${ELEMENT}
     Sleep    3s
+

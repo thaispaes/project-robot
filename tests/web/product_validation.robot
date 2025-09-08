@@ -11,8 +11,8 @@ Find product with success
     Given Search the product in application    ${PRODUCT}
     When Click in the first product in list
     And Validate product selected info page
-    #And Search for shipping options     
+    #And Search for shipping options    
     #And Validate shipping types - Not working
     #And Closing shipping options section
     And Select to buy the product
-
+    Then Validate Correct Product In Cart
