@@ -4,6 +4,7 @@ Documentation    Testes relacionados a pagina de HOME da aplicacao
 Resource    ../../resources/Web.resource
 
 Test Setup    Access Page
+Test Teardown    Close Browser
 
 
 *** Test Cases ***
@@ -15,4 +16,5 @@ Find product with success
     And Search For Shipping Options
     And Closing Shipping Options Section
     And Select To Buy The Product
-    Then Validate Correct Product In Cart
+    And Validate Correct Product In Cart
+    Then Generate Test Report PDF

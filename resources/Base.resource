@@ -2,13 +2,15 @@
 Documentation     Base resource file
 
 Library       SeleniumLibrary
+Library       ../resources/libs/generate_pdf.py
 
 Resource    variables/Web_variables.resource
 
 
 *** Variables ***
 ${COUNTER}    0
-
+${SCREENSHOT_DIR}     ${OUTPUT_DIR}/screenshots
+${PDF_OUTPUT}         ${OUTPUT_DIR}/relatorio_teste.pdf
 
 *** Keywords ***
 Access Page
@@ -41,3 +43,8 @@ Screenshots Capture With Test Name
     Set Suite Variable    ${COUNTER}    ${VALUE}
     Capture Page Screenshot    ${SCREENSHOT_DIR}${/}Screenshot__${COUNTER}_${TEST_NAME}.png
     Log    Screenshot captured: Screenshot__${COUNTER}_${TEST_NAME}.png
+
+Generate Test Report PDF
+    [Documentation]    Gerar relatorio em PDF com os screenshots do teste
+    ${PDF_OUTPUT}=    Generate PDF From Screenshots    screenshot_dir=${SCREENSHOT_DIR}    output_pdf=${PDF_OUTPUT}
+    Log    PDF gerado em: ${PDF_OUTPUT}
