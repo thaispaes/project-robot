@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 
 Resource    variables/Web_variables.resource
 Resource    Base.resource
+Resource    PreShopping.resource
 
 
 *** Variables ***
