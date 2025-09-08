@@ -416,3 +416,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+#HTML outputs 
+log.html 
+output.html
+report.html
