@@ -18,8 +18,6 @@ Validate Correct Product In Cart
     [Documentation]    Validar se o produto selecionado esta correto no carrinho de compras
     Wait Until Element Is Visible    ${CART_TITLE}
     Element Should Be Visible    //a[text()='${PRODUCT_SELECTED}']
-    Capture Page Screenshot
     Scroll To See Element    ${SCROLL_TO_ELEMENT}
     Sleep    3s
     Element Should Be Visible    ${WARRANTY_OPTION}
-    Capture Page Screenshot

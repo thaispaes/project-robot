@@ -30,9 +30,9 @@ Search For Shipping Options
     Element Should Be Visible    ${SHIPPING_INPUT}
     Click Element    ${SHIPPING_INPUT}
     Input Text    ${SHIPPING_INPUT}    ${CEP}
+    Capture Page Screenshot
     Wait Until Element Is Visible    ${SHIPPING_SECTION}//div//span[contains=(text()='CEP: ${CEP_HIFEN}')][2]
     Validate Shipping Types
-    Capture Page Screenshot
 
 Validate Shipping Types
     [Documentation]    Validar os tipos de frete disponiveis
@@ -44,6 +44,7 @@ Validate Shipping Types
         ${TYPES}=    Get Text    ${SHIPPING_TYPES}[${INDEX}]
         Log    Frete disponível: ${TYPES}
     END
+    Capture Page Screenshot
 
 Closing Shipping Options Section
     [Documentation]    Fechar a sessao de opcoes de frete
