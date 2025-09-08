@@ -1,9 +1,17 @@
 *** Settings ***
 Documentation     Suite de testes para a API de validação de CEP
 
+# Importando bibliotecas necessárias
 Resource    ../resources/api/ValidateCep.resource
 
 *** Test Cases ***
+# Cenário 01 - Buscar CEP Válido e Validar Resposta
+# Cenário 02 - Buscar CEP Inválido (Caracteres Especiais) e Validar Resposta
+# Cenário 03 - Buscar CEP Inválido (Espaços) e Validar Resposta
+# Cenário 04 - Buscar CEP Inválido (Letras) e Validar Resposta
+# Cenário 05 - Buscar CEP Inválido (Menos de 8 Dígitos) e Validar Resposta
+# Cenário 06 - Buscar CEP Inválido (Mais de 8 Dígitos) e Validar Resposta
+# Cenário 07 - Buscar CEP Inexistente e Validar Resposta  
 CN01 - Search CEP With a Valid CEP
     [Documentation]    Teste para buscar um CEP válido e validar a resposta da API.
     ${response}=    Given Validate Successful API Response for CEP    ${VALID_CEP}

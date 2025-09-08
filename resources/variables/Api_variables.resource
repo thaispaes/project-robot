@@ -1,8 +1,10 @@
 *** Settings ***
-Documentation    Variaveis para o teste da API
+Documentation    Variaveis globais para o teste da API
 
+# Variaveis de teste da API ViaCEP
 *** Variables ***
 ${BASE_URL}    https://viacep.com.br
+# Testando todas as possibilidades de CEP
 ${VALID_CEP}    20040002
 ${INVALID_CEP_SPECIAL_CHAR}    2004@002
 ${INVALID_CEP_SPACES}    123 45678
