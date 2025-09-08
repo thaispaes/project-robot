@@ -27,9 +27,11 @@ Search For Shipping Options
     Element Should Be Visible    ${SHIPPING_INPUT}
     Click Element    ${SHIPPING_INPUT}
     Input Text    ${SHIPPING_INPUT}    ${CEP}
-    Wait Until Element Is Visible    ${SHIPPING_SECTION}//div//span[contains=(text()='CEP: 52071-321')][2]    timeout=10s
+    Wait Until Element Is Visible    ${SHIPPING_SECTION}//div//span[contains=(text()='CEP: ${CEP_HIFEN}')][2]
     Validate Shipping Types
     Capture Page Screenshot
+
+#Not Working
 
 Validate Shipping Types
     [Documentation]    Validar os tipos de frete disponiveis
@@ -51,21 +53,5 @@ Select To Buy The Product
     Sleep    5s
     Capture Page Screenshot
     Validate If Warranty And Insurance Is Selected
-    Sleep    5s
     Validate If The Product Is Added In The Cart
-    Sleep    3s
     Go To Shopping Cart
-
-
-
-
-
-
-
-
-
-
-
-   
-   
-

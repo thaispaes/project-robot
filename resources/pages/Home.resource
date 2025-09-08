@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 
 Resource    ../Base.resource
 
+
 *** Variables ***
 ${SEARCH_INPUT}    //input[@id='inputBusca']
 ${PRODUCT_LIST}    //ul[@data-testid='searchbar-dropdown-menu']
@@ -29,4 +30,3 @@ Click In The First Product In List
     Set Global Variable    ${PRODUCT_SELECTED}    ${product}
     Click Element    xpath=${PRODUCT_LIST}//li[1]
     Capture Page Screenshot
-

@@ -18,14 +18,13 @@ Validate If The Product Is Added In The Cart
     Element Should Be Visible      ${CART_ADD_CONFIRMATION}
     Element Should Be Visible    //h2[text()='${PRODUCT_SELECTED}']
 
-
 Validate If Warranty And Insurance Is Selected
     [Documentation]    Validar se a garantia estendida e seguro estao selecionados ou nao
-    Radio Button Should Be Set To    garantia    4342883
+    Radio Button Should Be Set To    ${INPUT_NAME_WARRANTY}    ${INPUT_VALUE_WARRANTY}
     Scroll To See Element    ${SCROLL_ELEMENT}
     Element Should Be Visible    ${INSURANCE_INPUT}
     Sleep    5s
-    Select Radio Button    seguro    0
+    Select Radio Button    ${INPUT_NAME_INSURANCE}    ${INPUT_VALUE_INSURANCE}
     Capture Page Screenshot
 
 Go To Shopping Cart
@@ -33,5 +32,3 @@ Go To Shopping Cart
     Element Should Be Visible    ${ADD_SERVICES_BUTTON}
     Click Element    ${ADD_SERVICES_BUTTON}
     Capture Page Screenshot
-
-

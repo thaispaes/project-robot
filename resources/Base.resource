@@ -5,6 +5,7 @@ Library       SeleniumLibrary
 
 Resource    variables/Web_variables.resource
 
+
 *** Keywords ***
 Access Page
     [Documentation]    Acessar a pagina inicial da aplicacao

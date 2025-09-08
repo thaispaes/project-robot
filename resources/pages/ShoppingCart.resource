@@ -4,6 +4,7 @@ Documentation    Testes relacionados a pagina do Carrinho de compras da aplicaca
 Library    SeleniumLibrary
 
 Resource    ../Base.resource
+Resource    ../variables/Web_variables.resource
 
 
 *** Variables ***
@@ -22,5 +23,3 @@ Validate Correct Product In Cart
     Sleep    3s
     Element Should Be Visible    ${WARRANTY_OPTION}
     Capture Page Screenshot
-    
-
