@@ -14,6 +14,9 @@ ${SHIPPING_SECTION}    //section[@id='blocoCalcularFrete']
 ${SHIPPING_SECTION_CLOSE}    //button[@id='botaoAlterarCEP']
 ${SCROLL}    //img[@alt='Banner']
 ${BUY_BUTTON}    //button//span[text()="Comprar agora" or text()="COMPRAR AGORA"]
+${SHIPPING_TYPE_1}    ${SHIPPING_INPUT}//li//span[text()='Entrega Econômica']
+${SHIPPING_TYPE_2}    ${SHIPPING_INPUT}//li//span[text()='Entrega Padrão']
+${SHIPPING_TYPE_3}    ${SHIPPING_INPUT}//li//span[text()='Entrega Expressa']
 
 
 *** Keywords ***
@@ -31,12 +34,16 @@ Search For Shipping Options
     Validate Shipping Types
     Capture Page Screenshot
 
-#Not Working
-
 Validate Shipping Types
     [Documentation]    Validar os tipos de frete disponiveis
     Element Should Be Visible    ${SHIPPING_SECTION}
-    Scroll To See Element    ${SHIPPING_SECTION}
+    Scroll To See Element    ${SCROLL}
+    ${SHIPPING_TYPES}=    Get WebElements    ${SHIPPING_SECTION}//li//span[contains(text(),'Entrega')]
+    ${RANGE}=    Set Variable    3
+    FOR    ${INDEX}    IN RANGE    ${RANGE}
+        ${TYPES}=    Get Text    ${SHIPPING_TYPES}[${INDEX}]
+        Log    Frete disponível: ${TYPES}
+    END
 
 Closing Shipping Options Section
     [Documentation]    Fechar a sessao de opcoes de frete
@@ -55,3 +62,4 @@ Select To Buy The Product
     Validate If Warranty And Insurance Is Selected
     Validate If The Product Is Added In The Cart
     Go To Shopping Cart
+    Log    Produto adicionado ao carrinho com sucesso

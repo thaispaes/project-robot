@@ -1,479 +1,680 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-09-07T21:50:36.671629" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-09-07T22:54:07.489383" rpa="false" schemaversion="5">
 <suite id="s1" name="Project-Robot" source="D:\codigos\GitHub\project-robot">
 <suite id="s1-s1" name="Tests" source="D:\codigos\GitHub\project-robot\tests">
 <suite id="s1-s1-s1" name="Web" source="D:\codigos\GitHub\project-robot\tests\web">
 <suite id="s1-s1-s1-s1" name="Product Validation" source="D:\codigos\GitHub\project-robot\tests\web\product_validation.robot">
-<test id="s1-s1-s1-s1-t1" name="Find product with success" line="9">
-<kw name="Access page" owner="Base" type="SETUP">
+<test id="s1-s1-s1-s1-t1" name="Find product with success" line="11">
+<kw name="Access Page" owner="Base" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:37.044569" level="INFO">Opening browser 'chrome' to base url 'https://www.kabum.com.br/'.</msg>
+<msg time="2025-09-07T22:54:07.893763" level="INFO">Opening browser 'chrome' to base url 'https://www.kabum.com.br/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-07T21:50:37.044128" elapsed="6.021542"/>
+<status status="PASS" start="2025-09-07T22:54:07.893207" elapsed="7.059326"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-07T21:50:43.066312" elapsed="0.080214"/>
+<status status="PASS" start="2025-09-07T22:54:14.952931" elapsed="0.599311"/>
 </kw>
-<status status="PASS" start="2025-09-07T21:50:37.043195" elapsed="6.103663"/>
+<doc>Acessar a pagina inicial da aplicacao</doc>
+<status status="PASS" start="2025-09-07T22:54:07.891938" elapsed="7.660531"/>
 </kw>
-<kw name="Given Search the product in application" owner="Home">
+<kw name="Search The Product In Application" owner="Home">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=${SEARCH_INPUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:50:43.151293" elapsed="0.490512"/>
+<status status="PASS" start="2025-09-07T22:54:15.554124" elapsed="0.033960"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:43.643001" level="INFO">Clicking element 'xpath=//input[@id='inputBusca']'.</msg>
+<msg time="2025-09-07T22:54:15.588979" level="INFO">Clicking element 'xpath=//input[@id='inputBusca']'.</msg>
 <arg>xpath=${SEARCH_INPUT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:50:43.642173" elapsed="0.200231"/>
+<status status="PASS" start="2025-09-07T22:54:15.588392" elapsed="0.212212"/>
 </kw>
-<kw name="Writing element in input" owner="Base">
+<kw name="Writing Element In Input" owner="Base">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-07T21:50:43.844118" level="INFO">${chars} = ['n', 'o', 't', 'e', 'b', 'o', 'o', 'k']</msg>
+<msg time="2025-09-07T22:54:15.802687" level="INFO">${chars} = ['n', 'o', 't', 'e', 'b', 'o', 'o', 'k']</msg>
 <var>${chars}</var>
 <arg>[caracter for caracter in "${PRODUCT_NAME}"]</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-07T21:50:43.843627" elapsed="0.000795"/>
+<status status="PASS" start="2025-09-07T22:54:15.801991" elapsed="0.001080"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:43.845861" level="INFO">Sending key(s) ('n',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:44.191009" level="INFO">Sending key n</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:15.804702" level="INFO">Sending key(s) ('n',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:16.131411" level="INFO">Sending key n</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:43.845251" elapsed="0.361886"/>
+<status status="PASS" start="2025-09-07T22:54:15.804112" elapsed="0.343155"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:44.288023" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:16.228298" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:44.207408" elapsed="0.081044"/>
+<status status="PASS" start="2025-09-07T22:54:16.147566" elapsed="0.081020"/>
 </kw>
 <var name="${ch}">n</var>
-<status status="PASS" start="2025-09-07T21:50:43.844955" elapsed="0.443646"/>
+<status status="PASS" start="2025-09-07T22:54:15.803793" elapsed="0.424944"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:44.290151" level="INFO">Sending key(s) ('o',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:44.583200" level="INFO">Sending key o</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:16.229985" level="INFO">Sending key(s) ('o',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:16.515037" level="INFO">Sending key o</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:44.289228" elapsed="0.305147"/>
+<status status="PASS" start="2025-09-07T22:54:16.229327" elapsed="0.297867"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:44.675241" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:16.608410" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:44.594642" elapsed="0.081074"/>
+<status status="PASS" start="2025-09-07T22:54:16.527472" elapsed="0.081580"/>
 </kw>
 <var name="${ch}">o</var>
-<status status="PASS" start="2025-09-07T21:50:44.288794" elapsed="0.387107"/>
+<status status="PASS" start="2025-09-07T22:54:16.228930" elapsed="0.380328"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:44.678235" level="INFO">Sending key(s) ('t',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:44.970855" level="INFO">Sending key t</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:16.610699" level="INFO">Sending key(s) ('t',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:16.907951" level="INFO">Sending key t</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:44.677197" elapsed="0.313669"/>
+<status status="PASS" start="2025-09-07T22:54:16.609874" elapsed="0.312259"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:45.072015" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:17.002941" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:44.991141" elapsed="0.081465"/>
+<status status="PASS" start="2025-09-07T22:54:16.922405" elapsed="0.080980"/>
 </kw>
 <var name="${ch}">t</var>
-<status status="PASS" start="2025-09-07T21:50:44.676416" elapsed="0.396444"/>
+<status status="PASS" start="2025-09-07T22:54:16.609453" elapsed="0.394083"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:45.074731" level="INFO">Sending key(s) ('e',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:45.377887" level="INFO">Sending key e</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:17.004834" level="INFO">Sending key(s) ('e',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:17.288100" level="INFO">Sending key e</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:45.073670" elapsed="0.320457"/>
+<status status="PASS" start="2025-09-07T22:54:17.004123" elapsed="0.304496"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:45.475403" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:17.389839" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:45.394421" elapsed="0.081463"/>
+<status status="PASS" start="2025-09-07T22:54:17.308887" elapsed="0.081460"/>
 </kw>
 <var name="${ch}">e</var>
-<status status="PASS" start="2025-09-07T21:50:45.073105" elapsed="0.402952"/>
+<status status="PASS" start="2025-09-07T22:54:17.003720" elapsed="0.386792"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:45.477728" level="INFO">Sending key(s) ('b',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:45.800987" level="INFO">Sending key b</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:17.391770" level="INFO">Sending key(s) ('b',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:17.681106" level="INFO">Sending key b</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:45.476838" elapsed="0.348195"/>
+<status status="PASS" start="2025-09-07T22:54:17.391134" elapsed="0.305608"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:45.906878" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:17.778161" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:45.825486" elapsed="0.081833"/>
+<status status="PASS" start="2025-09-07T22:54:17.697087" elapsed="0.081574"/>
 </kw>
 <var name="${ch}">b</var>
-<status status="PASS" start="2025-09-07T21:50:45.476300" elapsed="0.431164"/>
+<status status="PASS" start="2025-09-07T22:54:17.390698" elapsed="0.388132"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:45.908737" level="INFO">Sending key(s) ('o',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:46.218858" level="INFO">Sending key o</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:17.780227" level="INFO">Sending key(s) ('o',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:18.068701" level="INFO">Sending key o</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:45.908024" elapsed="0.333518"/>
+<status status="PASS" start="2025-09-07T22:54:17.779542" elapsed="0.303787"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:46.322716" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:18.164492" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:46.241825" elapsed="0.081394"/>
+<status status="PASS" start="2025-09-07T22:54:18.083597" elapsed="0.081696"/>
 </kw>
 <var name="${ch}">o</var>
-<status status="PASS" start="2025-09-07T21:50:45.907624" elapsed="0.415747"/>
+<status status="PASS" start="2025-09-07T22:54:17.779050" elapsed="0.386454"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:46.324606" level="INFO">Sending key(s) ('o',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:46.625708" level="INFO">Sending key o</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:18.167576" level="INFO">Sending key(s) ('o',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:18.501806" level="INFO">Sending key o</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:46.323959" elapsed="0.322141"/>
+<status status="PASS" start="2025-09-07T22:54:18.166498" elapsed="0.357987"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:46.727517" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:18.605371" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:46.646416" elapsed="0.082021"/>
+<status status="PASS" start="2025-09-07T22:54:18.524750" elapsed="0.081216"/>
 </kw>
 <var name="${ch}">o</var>
-<status status="PASS" start="2025-09-07T21:50:46.323533" elapsed="0.405142"/>
+<status status="PASS" start="2025-09-07T22:54:18.165747" elapsed="0.440389"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:46.729923" level="INFO">Sending key(s) ('k',) to xpath=//input[@id='inputBusca'] element.</msg>
-<msg time="2025-09-07T21:50:47.026385" level="INFO">Sending key k</msg>
-<arg>xpath=${lOCATOR}</arg>
+<msg time="2025-09-07T22:54:18.607303" level="INFO">Sending key(s) ('k',) to xpath=//input[@id='inputBusca'] element.</msg>
+<msg time="2025-09-07T22:54:18.901229" level="INFO">Sending key k</msg>
+<arg>xpath=${LOCATOR}</arg>
 <arg>${ch}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-07T21:50:46.729275" elapsed="0.319021"/>
+<status status="PASS" start="2025-09-07T22:54:18.606657" elapsed="0.319969"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:47.129559" level="INFO">Slept 80 milliseconds.</msg>
+<msg time="2025-09-07T22:54:19.007883" level="INFO">Slept 80 milliseconds.</msg>
 <arg>0.08</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:47.048651" elapsed="0.081523"/>
+<status status="PASS" start="2025-09-07T22:54:18.926891" elapsed="0.081498"/>
 </kw>
 <var name="${ch}">k</var>
-<status status="PASS" start="2025-09-07T21:50:46.728851" elapsed="0.401527"/>
+<status status="PASS" start="2025-09-07T22:54:18.606305" elapsed="0.402251"/>
 </iter>
 <var>${ch}</var>
 <value>@{chars}</value>
-<status status="PASS" start="2025-09-07T21:50:43.844584" elapsed="3.285908"/>
+<status status="PASS" start="2025-09-07T22:54:15.803251" elapsed="3.205388"/>
 </for>
 <arg>${PRODUCT_NAME}</arg>
 <arg>${SEARCH_INPUT}</arg>
-<status status="PASS" start="2025-09-07T21:50:43.842888" elapsed="3.287768"/>
+<doc>Escrever produto no campo de busca</doc>
+<status status="PASS" start="2025-09-07T22:54:15.801027" elapsed="3.207737"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:47.374035" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T22:54:19.249221" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-07T21:50:47.130879" elapsed="0.243725"/>
+<status status="PASS" start="2025-09-07T22:54:19.008970" elapsed="0.240527"/>
 </kw>
 <arg>${PRODUCT}</arg>
-<status status="PASS" start="2025-09-07T21:50:43.147765" elapsed="4.227107"/>
+<doc>Realizar a busca de um produto na aplicacao</doc>
+<status status="PASS" start="2025-09-07T22:54:15.553009" elapsed="3.696666"/>
 </kw>
-<kw name="When Click in the first product in list" owner="Home">
+<kw name="When Click In The First Product In List" owner="Home">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=${PRODUCT_LIST}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:50:47.379760" elapsed="0.018045"/>
+<status status="PASS" start="2025-09-07T22:54:19.253804" elapsed="0.030441"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:47.420115" level="INFO">Element 'xpath=//ul[@data-testid='searchbar-dropdown-menu']' is displayed.</msg>
+<msg time="2025-09-07T22:54:19.300225" level="INFO">Element 'xpath=//ul[@data-testid='searchbar-dropdown-menu']' is displayed.</msg>
 <arg>xpath=${PRODUCT_LIST}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:50:47.398122" elapsed="0.022237"/>
+<status status="PASS" start="2025-09-07T22:54:19.284517" elapsed="0.016004"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=${PRODUCT_LIST}//li[1]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:50:47.420596" elapsed="0.025196"/>
+<status status="PASS" start="2025-09-07T22:54:19.300830" elapsed="0.022998"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:50.447253" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-09-07T22:54:22.324686" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:47.446083" elapsed="3.001856"/>
+<status status="PASS" start="2025-09-07T22:54:19.324125" elapsed="3.001056"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:50.465646" level="INFO">${product} = Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N</msg>
+<msg time="2025-09-07T22:54:22.343822" level="INFO">${product} = Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N</msg>
 <var>${product}</var>
 <arg>xpath=${PRODUCT_LIST}//li[1]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:50:50.448231" elapsed="0.017622"/>
+<status status="PASS" start="2025-09-07T22:54:22.325475" elapsed="0.018534"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-09-07T21:50:50.466863" level="INFO">${PRODUCT_SELECTED} = Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N</msg>
+<msg time="2025-09-07T22:54:22.344965" level="INFO">${PRODUCT_SELECTED} = Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N</msg>
 <arg>${PRODUCT_SELECTED}</arg>
 <arg>${product}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-09-07T21:50:50.466123" elapsed="0.001019"/>
+<status status="PASS" start="2025-09-07T22:54:22.344271" elapsed="0.000832"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:50.467907" level="INFO">Clicking element 'xpath=//ul[@data-testid='searchbar-dropdown-menu']//li[1]'.</msg>
+<msg time="2025-09-07T22:54:22.345801" level="INFO">Clicking element 'xpath=//ul[@data-testid='searchbar-dropdown-menu']//li[1]'.</msg>
 <arg>xpath=${PRODUCT_LIST}//li[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:50:50.467370" elapsed="3.254519"/>
+<status status="PASS" start="2025-09-07T22:54:22.345317" elapsed="2.748452"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:53.957606" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T22:54:25.348279" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-07T21:50:53.722294" elapsed="0.236023"/>
+<status status="PASS" start="2025-09-07T22:54:25.094471" elapsed="0.254412"/>
 </kw>
-<status status="PASS" start="2025-09-07T21:50:47.377532" elapsed="6.581091"/>
+<doc>Clicar no primeiro produto da lista de resultados da busca</doc>
+<status status="PASS" start="2025-09-07T22:54:19.250268" elapsed="6.098878"/>
 </kw>
-<kw name="And Validate product selected info page" owner="ProductInfo">
+<kw name="And Validate Product Selected Info Page" owner="ProductInfo">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:53.983224" level="INFO">Element '//h1[text()='Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N']' is displayed.</msg>
+<msg time="2025-09-07T22:54:25.371624" level="INFO">Element '//h1[text()='Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N']' is displayed.</msg>
 <arg>//h1[text()='${PRODUCT_SELECTED}']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:50:53.963446" elapsed="0.020110"/>
+<status status="PASS" start="2025-09-07T22:54:25.354476" elapsed="0.017851"/>
 </kw>
-<status status="PASS" start="2025-09-07T21:50:53.961276" elapsed="0.022476"/>
+<doc>Validar se o produto da pagina foi o produto selecionado</doc>
+<status status="PASS" start="2025-09-07T22:54:25.352451" elapsed="0.020144"/>
 </kw>
-<kw name="And Select to buy the product" owner="ProductInfo">
-<kw name="Scroll to see element" owner="Base">
+<kw name="And Search For Shipping Options" owner="ProductInfo">
+<kw name="Scroll To See Element" owner="Base">
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:54.004495" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c0e73aa8ad885ae7918a60a756eb2faa", element="f.6496879B6579E152E01EE8E0CCB9A8D4.d.9618106249E9C90AA3706D0A884D3C5F.e.211")&gt;</msg>
+<msg time="2025-09-07T22:54:25.389169" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="effecf5e2084313d8b2f5acb1731a64a", element="f.619A69F51F0968D824EE0415DDD51969.d.964F55B2AED232FD837F761010ACE2A1.e.185")&gt;</msg>
 <var>${ELEMENT}</var>
 <arg>${COMPONENT}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:50:53.991200" elapsed="0.013680"/>
+<status status="PASS" start="2025-09-07T22:54:25.380189" elapsed="0.009176"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${ELEMENT}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-09-07T21:50:54.005631" elapsed="0.274655"/>
+<status status="PASS" start="2025-09-07T22:54:25.389614" elapsed="0.273456"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:50:57.281557" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-09-07T22:54:28.664300" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:54.280577" elapsed="3.001538"/>
+<status status="PASS" start="2025-09-07T22:54:25.663337" elapsed="3.001660"/>
 </kw>
 <arg>${SCROLL}</arg>
-<status status="PASS" start="2025-09-07T21:50:53.990697" elapsed="3.291629"/>
+<doc>Rolar a pagina para visualizar o elemento</doc>
+<status status="PASS" start="2025-09-07T22:54:25.379650" elapsed="3.285681"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:28.682835" level="INFO">Element '//input[@id='inputCalcularFrete']' is displayed.</msg>
+<arg>${SHIPPING_INPUT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:28.665565" elapsed="0.017617"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:50:57.283219" level="INFO">Clicking element '//button//span[text()="Comprar agora" or text()="COMPRAR AGORA"]'.</msg>
-<arg>${BUY_BUTTON}</arg>
+<msg time="2025-09-07T22:54:28.684392" level="INFO">Clicking element '//input[@id='inputCalcularFrete']'.</msg>
+<arg>${SHIPPING_INPUT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:50:57.282535" elapsed="0.143554"/>
+<status status="PASS" start="2025-09-07T22:54:28.683545" elapsed="0.071633"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:51:02.426993" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:50:57.426353" elapsed="5.001160"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:28.756007" level="INFO">Typing text '52071321' into text field '//input[@id='inputCalcularFrete']'.</msg>
+<arg>${SHIPPING_INPUT}</arg>
+<arg>${CEP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:28.755442" elapsed="0.123136"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:02.533374" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-07T21:51:02.427899" elapsed="0.105914"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SHIPPING_SECTION}//div//span[contains=(text()='CEP: ${CEP_HIFEN}')][2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:28.879113" elapsed="1.055031"/>
 </kw>
-<kw name="Validate if warranty and insurance is selected" owner="PreShopping">
-<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:02.535588" level="INFO">Verifying radio button 'garantia' has selection '4342883'.</msg>
-<arg>garantia</arg>
-<arg>4342883</arg>
-<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
-<status status="PASS" start="2025-09-07T21:51:02.535024" elapsed="0.021799"/>
+<kw name="Validate Shipping Types" owner="ProductInfo">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:29.949565" level="INFO">Element '//section[@id='blocoCalcularFrete']' is displayed.</msg>
+<arg>${SHIPPING_SECTION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:29.935097" elapsed="0.014719"/>
 </kw>
-<kw name="Scroll to see element" owner="Base">
+<kw name="Scroll To See Element" owner="Base">
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:02.566906" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c0e73aa8ad885ae7918a60a756eb2faa", element="f.6496879B6579E152E01EE8E0CCB9A8D4.d.B21808339EE515D77B588542E6DEFF2B.e.257")&gt;</msg>
+<msg time="2025-09-07T22:54:29.957621" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="effecf5e2084313d8b2f5acb1731a64a", element="f.619A69F51F0968D824EE0415DDD51969.d.964F55B2AED232FD837F761010ACE2A1.e.185")&gt;</msg>
 <var>${ELEMENT}</var>
 <arg>${COMPONENT}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:51:02.557741" elapsed="0.009346"/>
+<status status="PASS" start="2025-09-07T22:54:29.951458" elapsed="0.006359"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${ELEMENT}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-09-07T21:51:02.567325" elapsed="0.278315"/>
+<status status="PASS" start="2025-09-07T22:54:29.958064" elapsed="0.265862"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:51:05.846628" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-09-07T22:54:33.224773" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:51:02.845900" elapsed="3.001211"/>
+<status status="PASS" start="2025-09-07T22:54:30.224214" elapsed="3.001067"/>
 </kw>
-<arg>${SCROLL_ELEMENT}</arg>
-<status status="PASS" start="2025-09-07T21:51:02.557142" elapsed="3.290150"/>
+<arg>${SCROLL}</arg>
+<doc>Rolar a pagina para visualizar o elemento</doc>
+<status status="PASS" start="2025-09-07T22:54:29.950115" elapsed="3.275355"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:05.861984" level="INFO">Element '//input[@name='seguro' and @type='radio'][1]' is displayed.</msg>
-<arg>${INSURANCE_INPUT}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:51:05.847486" elapsed="0.014745"/>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:33.234779" level="INFO">${SHIPPING_TYPES} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="effecf5e2084313d8b2f5acb1731a64a", element="f.619A69F51F0968D824EE0415DDD51969.d.964F55B2AED232FD837F761010ACE2A1.e.204")&gt;, &lt;selenium.webdri...</msg>
+<var>${SHIPPING_TYPES}</var>
+<arg>${SHIPPING_SECTION}//li//span[contains(text(),'Entrega')]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.225659" elapsed="0.009314"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:51:10.863497" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:51:05.862463" elapsed="5.001478"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-07T22:54:33.235771" level="INFO">${RANGE} = 3</msg>
+<var>${RANGE}</var>
+<arg>3</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.235222" elapsed="0.000666"/>
 </kw>
-<kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:10.864644" level="INFO">Selecting '0' from radio button 'seguro'.</msg>
-<arg>seguro</arg>
-<arg>0</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2025-09-07T21:51:10.864190" elapsed="0.094360"/>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:33.244299" level="INFO">${TYPES} = Entrega Econômica</msg>
+<var>${TYPES}</var>
+<arg>${SHIPPING_TYPES}[${INDEX}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.236806" elapsed="0.007678"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T22:54:33.245239" level="INFO">Frete disponível: Entrega Econômica</msg>
+<arg>Frete disponível: ${TYPES}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.244737" elapsed="0.000733"/>
+</kw>
+<var name="${INDEX}">0</var>
+<status status="PASS" start="2025-09-07T22:54:33.236487" elapsed="0.009121"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:33.252749" level="INFO">${TYPES} = Entrega Padrão</msg>
+<var>${TYPES}</var>
+<arg>${SHIPPING_TYPES}[${INDEX}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.246213" elapsed="0.006724"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T22:54:33.253693" level="INFO">Frete disponível: Entrega Padrão</msg>
+<arg>Frete disponível: ${TYPES}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.253185" elapsed="0.000759"/>
+</kw>
+<var name="${INDEX}">1</var>
+<status status="PASS" start="2025-09-07T22:54:33.245819" elapsed="0.008278"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:33.260579" level="INFO">${TYPES} = Entrega Expressa</msg>
+<var>${TYPES}</var>
+<arg>${SHIPPING_TYPES}[${INDEX}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.254687" elapsed="0.006061"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T22:54:33.261509" level="INFO">Frete disponível: Entrega Expressa</msg>
+<arg>Frete disponível: ${TYPES}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.260976" elapsed="0.000676"/>
+</kw>
+<var name="${INDEX}">2</var>
+<status status="PASS" start="2025-09-07T22:54:33.254302" elapsed="0.007446"/>
+</iter>
+<var>${INDEX}</var>
+<value>${RANGE}</value>
+<status status="PASS" start="2025-09-07T22:54:33.236021" elapsed="0.025821"/>
+</for>
+<doc>Validar os tipos de frete disponiveis</doc>
+<status status="PASS" start="2025-09-07T22:54:29.934512" elapsed="3.327456"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:11.071828" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T22:54:33.464987" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-07T21:51:10.958999" elapsed="0.113079"/>
+<status status="PASS" start="2025-09-07T22:54:33.262161" elapsed="0.203527"/>
 </kw>
-<status status="PASS" start="2025-09-07T21:51:02.534290" elapsed="8.537962"/>
+<doc>Buscar as opcoes de frete para o produto selecionado</doc>
+<status status="PASS" start="2025-09-07T22:54:25.375836" elapsed="8.090126"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:51:16.073227" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:51:11.072470" elapsed="5.001193"/>
-</kw>
-<kw name="Validate if the product is add in the cart" owner="PreShopping">
+<kw name="And Closing Shipping Options Section" owner="ProductInfo">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:16.092145" level="INFO">Element '//strong[text()="Produto adicionado no carrinho"]' is displayed.</msg>
-<arg>${CART_ADD_CONFIRMATION}</arg>
+<msg time="2025-09-07T22:54:33.482496" level="INFO">Element '//section[@id='blocoCalcularFrete']' is displayed.</msg>
+<arg>${SHIPPING_SECTION}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:51:16.074665" elapsed="0.017754"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:16.107289" level="INFO">Element '//h2[text()='Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N']' is displayed.</msg>
-<arg>//h2[text()='${PRODUCT_SELECTED}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:51:16.092652" elapsed="0.014929"/>
-</kw>
-<status status="PASS" start="2025-09-07T21:51:16.073983" elapsed="0.033781"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:51:19.108718" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:51:16.108001" elapsed="3.001221"/>
-</kw>
-<kw name="Go to shopping cart" owner="PreShopping">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:19.124127" level="INFO">Element '//button//span[text()='Adicionar serviços']' is displayed.</msg>
-<arg>${ADD_SERVICES_BUTTON}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:51:19.110355" elapsed="0.014037"/>
+<status status="PASS" start="2025-09-07T22:54:33.470700" elapsed="0.012047"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:19.125198" level="INFO">Clicking element '//button//span[text()='Adicionar serviços']'.</msg>
-<arg>${ADD_SERVICES_BUTTON}</arg>
+<msg time="2025-09-07T22:54:33.483634" level="INFO">Clicking element '//button[@id='botaoAlterarCEP']'.</msg>
+<arg>${SHIPPING_SECTION_CLOSE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:51:19.124624" elapsed="2.651562"/>
+<status status="PASS" start="2025-09-07T22:54:33.482987" elapsed="0.064953"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T22:54:38.549113" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T22:54:33.548204" elapsed="5.001537"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SHIPPING_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:38.550172" elapsed="0.010512"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:21.943296" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T22:54:38.760296" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-07T21:51:21.776454" elapsed="0.167308"/>
+<status status="PASS" start="2025-09-07T22:54:38.561054" elapsed="0.199536"/>
 </kw>
-<status status="PASS" start="2025-09-07T21:51:19.109611" elapsed="2.834348"/>
+<doc>Fechar a sessao de opcoes de frete</doc>
+<status status="PASS" start="2025-09-07T22:54:33.468483" elapsed="5.292306"/>
 </kw>
-<status status="PASS" start="2025-09-07T21:50:53.987092" elapsed="27.956974"/>
+<kw name="And Select To Buy The Product" owner="ProductInfo">
+<kw name="Scroll To See Element" owner="Base">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:38.774288" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="effecf5e2084313d8b2f5acb1731a64a", element="f.619A69F51F0968D824EE0415DDD51969.d.964F55B2AED232FD837F761010ACE2A1.e.185")&gt;</msg>
+<var>${ELEMENT}</var>
+<arg>${COMPONENT}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:38.767393" elapsed="0.007082"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-09-07T22:54:38.774735" elapsed="0.269226"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T22:54:42.044926" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T22:54:39.044223" elapsed="3.001445"/>
+</kw>
+<arg>${SCROLL}</arg>
+<doc>Rolar a pagina para visualizar o elemento</doc>
+<status status="PASS" start="2025-09-07T22:54:38.766936" elapsed="3.278986"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:42.047007" level="INFO">Clicking element '//button//span[text()="Comprar agora" or text()="COMPRAR AGORA"]'.</msg>
+<arg>${BUY_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:42.046210" elapsed="0.136693"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T22:54:47.184216" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T22:54:42.183286" elapsed="5.001505"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:47.298388" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-07T22:54:47.185092" elapsed="0.113633"/>
+</kw>
+<kw name="Validate If Warranty And Insurance Is Selected" owner="PreShopping">
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:47.300259" level="INFO">Verifying radio button 'garantia' has selection '4342883'.</msg>
+<arg>${INPUT_NAME_WARRANTY}</arg>
+<arg>${INPUT_VALUE_WARRANTY}</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2025-09-07T22:54:47.299692" elapsed="0.021242"/>
+</kw>
+<kw name="Scroll To See Element" owner="Base">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:47.330360" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="effecf5e2084313d8b2f5acb1731a64a", element="f.619A69F51F0968D824EE0415DDD51969.d.6947FDD05DCDDC8449859D88EE8E3546.e.258")&gt;</msg>
+<var>${ELEMENT}</var>
+<arg>${COMPONENT}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:47.321837" elapsed="0.009040"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-09-07T22:54:47.331615" elapsed="0.283800"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T22:54:50.616429" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T22:54:47.615675" elapsed="3.001193"/>
+</kw>
+<arg>${SCROLL_ELEMENT}</arg>
+<doc>Rolar a pagina para visualizar o elemento</doc>
+<status status="PASS" start="2025-09-07T22:54:47.321257" elapsed="3.295789"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:50.631579" level="INFO">Element '//input[@name='seguro' and @type='radio'][1]' is displayed.</msg>
+<arg>${INSURANCE_INPUT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:50.617244" elapsed="0.014621"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-07T22:54:55.633006" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-07T22:54:50.632146" elapsed="5.001348"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:55.634387" level="INFO">Selecting '0' from radio button 'seguro'.</msg>
+<arg>${INPUT_NAME_INSURANCE}</arg>
+<arg>${INPUT_VALUE_INSURANCE}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2025-09-07T22:54:55.633770" elapsed="0.088568"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:55.860670" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-07T22:54:55.722750" elapsed="0.138196"/>
+</kw>
+<doc>Validar se a garantia estendida e seguro estao selecionados ou nao</doc>
+<status status="PASS" start="2025-09-07T22:54:47.299109" elapsed="8.562034"/>
+</kw>
+<kw name="Validate If The Product Is Added In The Cart" owner="PreShopping">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:55.876026" level="INFO">Element '//strong[text()="Produto adicionado no carrinho"]' is displayed.</msg>
+<arg>${CART_ADD_CONFIRMATION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:55.861894" elapsed="0.014381"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:55.889778" level="INFO">Element '//h2[text()='Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N']' is displayed.</msg>
+<arg>//h2[text()='${PRODUCT_SELECTED}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:55.876511" elapsed="0.013542"/>
+</kw>
+<doc>Validar se o produto foi adicionado no carrinho de compras</doc>
+<status status="PASS" start="2025-09-07T22:54:55.861362" elapsed="0.028872"/>
+</kw>
+<kw name="Go To Shopping Cart" owner="PreShopping">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:55.905946" level="INFO">Element '//button//span[text()='Adicionar serviços']' is displayed.</msg>
+<arg>${ADD_SERVICES_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-07T22:54:55.891045" elapsed="0.015153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:55.907034" level="INFO">Clicking element '//button//span[text()='Adicionar serviços']'.</msg>
+<arg>${ADD_SERVICES_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T22:54:55.906435" elapsed="2.813017"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-07T22:54:58.873113" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-07T22:54:58.719825" elapsed="0.153543"/>
+</kw>
+<doc>Acessar o carrinho de compras apos adicionar o produto e a garantia</doc>
+<status status="PASS" start="2025-09-07T22:54:55.890450" elapsed="2.983281"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-07T22:54:58.874287" level="INFO">Produto adicionado ao carrinho com sucesso</msg>
+<arg>Produto adicionado ao carrinho com sucesso</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-07T22:54:58.873922" elapsed="0.000532"/>
+</kw>
+<doc>Selecionar o produto para compra e validar se o produto foi adicionado ao carrinho</doc>
+<status status="PASS" start="2025-09-07T22:54:38.763565" elapsed="20.111026"/>
 </kw>
 <kw name="Then Validate Correct Product In Cart" owner="ShoppingCart">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CART_TITLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:51:21.948369" elapsed="0.014682"/>
+<status status="PASS" start="2025-09-07T22:54:58.880422" elapsed="0.014306"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:21.977752" level="INFO">Element '//a[text()='Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N']' is displayed.</msg>
+<msg time="2025-09-07T22:54:58.908610" level="INFO">Element '//a[text()='Notebook Acer Aspire 5 AMD Ryzen7-5700U, 16GB RAM, SSD 512GB, 15.6" FHD IPS, AMD Radeon, Linux, Prata - A515-45-R74N']' is displayed.</msg>
 <arg>//a[text()='${PRODUCT_SELECTED}']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:51:21.963340" elapsed="0.014722"/>
+<status status="PASS" start="2025-09-07T22:54:58.894992" elapsed="0.013901"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:22.119503" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T22:54:59.031129" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-07T21:51:21.978386" elapsed="0.141578"/>
+<status status="PASS" start="2025-09-07T22:54:58.909134" elapsed="0.122399"/>
 </kw>
-<kw name="Scroll to see element" owner="Base">
+<kw name="Scroll To See Element" owner="Base">
 <kw name="Get WebElement" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:22.129398" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c0e73aa8ad885ae7918a60a756eb2faa", element="f.6496879B6579E152E01EE8E0CCB9A8D4.d.CA29941994E327F7F5C9C1685459248D.e.322")&gt;</msg>
+<msg time="2025-09-07T22:54:59.040916" level="INFO">${ELEMENT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="effecf5e2084313d8b2f5acb1731a64a", element="f.619A69F51F0968D824EE0415DDD51969.d.6422C335F8A7ECD881FC43F09E5E80D1.e.324")&gt;</msg>
 <var>${ELEMENT}</var>
 <arg>${COMPONENT}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="PASS" start="2025-09-07T21:51:22.121037" elapsed="0.008678"/>
+<status status="PASS" start="2025-09-07T22:54:59.032723" elapsed="0.008386"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${ELEMENT}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-09-07T21:51:22.130106" elapsed="0.277357"/>
+<status status="PASS" start="2025-09-07T22:54:59.041353" elapsed="0.270070"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:51:25.408264" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-09-07T22:55:02.312569" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:51:22.407713" elapsed="3.001143"/>
+<status status="PASS" start="2025-09-07T22:54:59.311721" elapsed="3.001294"/>
 </kw>
 <arg>${SCROLL_TO_ELEMENT}</arg>
-<status status="PASS" start="2025-09-07T21:51:22.120295" elapsed="3.288817"/>
+<doc>Rolar a pagina para visualizar o elemento</doc>
+<status status="PASS" start="2025-09-07T22:54:59.031978" elapsed="3.281211"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-07T21:51:28.410133" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-09-07T22:55:05.314363" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-07T21:51:25.409388" elapsed="3.001093"/>
+<status status="PASS" start="2025-09-07T22:55:02.313381" elapsed="3.001510"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:28.424503" level="INFO">Element '//p[@aria-label='Garantia Estendida Kabum - 12 Meses']' is displayed.</msg>
+<msg time="2025-09-07T22:55:05.328716" level="INFO">Element '//p[@aria-label='Garantia Estendida Kabum - 12 Meses']' is displayed.</msg>
 <arg>${WARRANTY_OPTION}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-07T21:51:28.410753" elapsed="0.014043"/>
+<status status="PASS" start="2025-09-07T22:55:05.315324" elapsed="0.013635"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-07T21:51:28.530139" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-07T22:55:05.446926" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-07T21:51:28.425116" elapsed="0.105554"/>
+<status status="PASS" start="2025-09-07T22:55:05.329194" elapsed="0.118007"/>
 </kw>
 <doc>Validar se o produto selecionado esta correto no carrinho de compras</doc>
-<status status="PASS" start="2025-09-07T21:51:21.946400" elapsed="6.584505"/>
+<status status="PASS" start="2025-09-07T22:54:58.878161" elapsed="6.569222"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-07T22:55:05.450052" elapsed="2.487850"/>
 </kw>
 <doc>Validar a busca de um produto na aplicacao</doc>
-<status status="PASS" start="2025-09-07T21:50:37.038848" elapsed="51.494385"/>
+<status status="PASS" start="2025-09-07T22:54:07.888592" elapsed="60.049856"/>
 </test>
 <doc>Testes relacionados a pagina de HOME da aplicacao</doc>
-<status status="PASS" start="2025-09-07T21:50:36.723957" elapsed="51.813313"/>
+<status status="PASS" start="2025-09-07T22:54:07.545240" elapsed="60.397649"/>
 </suite>
-<status status="PASS" start="2025-09-07T21:50:36.716371" elapsed="51.823811"/>
+<status status="PASS" start="2025-09-07T22:54:07.531606" elapsed="60.415564"/>
 </suite>
-<status status="PASS" start="2025-09-07T21:50:36.707512" elapsed="51.836100"/>
+<status status="PASS" start="2025-09-07T22:54:07.526805" elapsed="60.423694"/>
 </suite>
-<status status="PASS" start="2025-09-07T21:50:36.678063" elapsed="51.868859"/>
+<status status="PASS" start="2025-09-07T22:54:07.495633" elapsed="60.462263"/>
 </suite>
 <statistics>
 <total>
