@@ -13,8 +13,8 @@ Resource    PreShopping.resource
 # Element Locators
 ${SHIPPING_INPUT}    //input[@id='inputCalcularFrete']
 ${SHIPPING_SECTION}    //section[@id='blocoCalcularFrete']
-${SHIPPING_SECTION_CLOSE}    //button[@id='botaoAlterarCEP']
-${SCROLL}    //img[@alt='Banner']
+${SHIPPING_SECTION_CLOSE}    //span[@class='underline text-xxs font-bold normal-case']
+${SCROLL}    //h2[normalize-space()='Perguntas e respostas']
 ${BUY_BUTTON}    //button//span[text()="Comprar agora" or text()="COMPRAR AGORA"]
 
 *** Keywords ***
@@ -59,6 +59,7 @@ Validate Shipping Types
 Closing Shipping Options Section
     [Documentation]    Fechar a sessao de opcoes de frete
     Element Should Be Visible    ${SHIPPING_SECTION}
+    Wait Until Element Is Enabled    ${SHIPPING_SECTION_CLOSE}
     Click Element    ${SHIPPING_SECTION_CLOSE}
     Sleep    5s
     Wait Until Element Is Visible    ${SHIPPING_INPUT}

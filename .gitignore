@@ -419,5 +419,7 @@ FodyWeavers.xsd
 
 #HTML outputs 
 log.html 
-output.html
+output.xml
 report.html
+
+venv/
