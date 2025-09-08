@@ -1,7 +1,9 @@
 [tool.robot]
+
+#Nome e local dos arquivos
 log = "results/log.html"
 output = "results/output.xml"
 report = "results/report.html"
 
-
+#Pasta onde todos os resultados serão salvos
 outputdir = "results"

@@ -25,10 +25,10 @@ Validate If Warranty And Insurance Is Selected
     Element Should Be Visible    ${INSURANCE_INPUT}
     Sleep    5s
     Select Radio Button    ${INPUT_NAME_INSURANCE}    ${INPUT_VALUE_INSURANCE}
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    WarrantyAndInsuranceSelected
 
 Go To Shopping Cart
     [Documentation]    Acessar o carrinho de compras apos adicionar o produto e a garantia
     Element Should Be Visible    ${ADD_SERVICES_BUTTON}
     Click Element    ${ADD_SERVICES_BUTTON}
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    GoToShoppingCart

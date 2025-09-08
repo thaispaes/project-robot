@@ -6,6 +6,10 @@ Library       SeleniumLibrary
 Resource    variables/Web_variables.resource
 
 
+*** Variables ***
+${COUNTER}    0
+
+
 *** Keywords ***
 Access Page
     [Documentation]    Acessar a pagina inicial da aplicacao
@@ -27,3 +31,13 @@ Scroll To See Element
     ${ELEMENT}=    Get WebElement    ${COMPONENT}
     Scroll Element Into View    ${ELEMENT}
     Sleep    3s
+
+Screenshots Capture With Test Name
+    [Documentation]    Capturar screenshot com nome do cenario de teste
+    [Arguments]    ${TEST_NAME}
+    ${SCREENSHOT_DIR}=    Set Variable    ../results/screenshots
+    #Incrementar contador para deixar os screenshots em ordem
+    ${VALUE}=    Evaluate    ${COUNTER}+ 1
+    Set Suite Variable    ${COUNTER}    ${VALUE}
+    Capture Page Screenshot    ${SCREENSHOT_DIR}${/}Screenshot__${COUNTER}_${TEST_NAME}.png
+    Log    Screenshot captured: Screenshot__${COUNTER}_${TEST_NAME}.png

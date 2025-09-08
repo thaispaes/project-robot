@@ -20,7 +20,7 @@ Close Alert About Notifications
     Click Element    ${CLOSE_BUTTON}
     Element Should Be Visible    ${COOKIE_BUTTON}
     Click Button    ${COOKIE_BUTTON}
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    HomePage
 
 Search The Product In Application
     [Documentation]    Realizar a busca de um produto na aplicacao
@@ -29,7 +29,7 @@ Search The Product In Application
     Wait Until Element Is Visible    xpath=${SEARCH_INPUT}
     Click Element    xpath=${SEARCH_INPUT}
     Writing Element In Input    ${PRODUCT_NAME}    ${SEARCH_INPUT}
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    SearchProduct
 
 Click In The First Product In List
     [Documentation]    Clicar no primeiro produto da lista de resultados da busca
@@ -39,4 +39,4 @@ Click In The First Product In List
     ${product}=    Get Text    xpath=${PRODUCT_LIST}//li[1]
     Set Global Variable    ${PRODUCT_SELECTED}    ${product}
     Click Element    xpath=${PRODUCT_LIST}//li[1]
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    ProductSelected

@@ -30,7 +30,7 @@ Search For Shipping Options
     Element Should Be Visible    ${SHIPPING_INPUT}
     Click Element    ${SHIPPING_INPUT}
     Input Text    ${SHIPPING_INPUT}    ${CEP}
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    SearchShipping
     Wait Until Element Is Visible    ${SHIPPING_SECTION}//div//span[contains=(text()='CEP: ${CEP_HIFEN}')][2]
     Validate Shipping Types
 
@@ -44,7 +44,7 @@ Validate Shipping Types
         ${TYPES}=    Get Text    ${SHIPPING_TYPES}[${INDEX}]
         Log    Frete disponível: ${TYPES}
     END
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    ValidateShippingOptions
 
 Closing Shipping Options Section
     [Documentation]    Fechar a sessao de opcoes de frete
@@ -52,14 +52,14 @@ Closing Shipping Options Section
     Click Element    ${SHIPPING_SECTION_CLOSE}
     Sleep    5s
     Wait Until Element Is Visible    ${SHIPPING_INPUT}
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    ClosedShippingSection
 
 Select To Buy The Product
     [Documentation]    Selecionar o produto para compra e validar se o produto foi adicionado ao carrinho
     Scroll To See Element    ${SCROLL}
     Click Element    ${BUY_BUTTON}
     Sleep    5s
-    Capture Page Screenshot
+    Screenshots Capture With Test Name    ClickedToBuy
     Validate If Warranty And Insurance Is Selected
     Validate If The Product Is Added In The Cart
     Go To Shopping Cart
